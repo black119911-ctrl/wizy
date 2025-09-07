@@ -1,0 +1,96 @@
+{
+  "result": true,
+  "token": {
+    "userID": 0,
+    "key": "f7466e98-2f84-430b-84c0-98536346f144",
+    "expirationDate": "2025-09-04T11:19:46.1098305+03:00",
+    "isValid": true
+  }
+}
+
+
+user2
+user2@mail.com
++7 999 (999) 9999
+123
+
+
+
+user3
+user3@mail.com
++7 999 (999) 9999
+123
+
+Регистрация
+
+{
+  "result": true,
+  "token": {
+    "userID": 0,
+    "key": "c32a9b5e-c6c5-4e1f-b9c5-9b82c45ad140",
+    "expirationDate": "2025-09-04T15:18:34.1854615+03:00",
+    "isValid": true
+  }
+}
+
+
+Неправильный пароль при регистрации - 
+
+{
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+  "title": "Bad Request",
+  "status": 400,
+  "traceId": "00-0181540ba3f063518d1b59c87f5c4a5b-f8fc3f2ee0abd9c4-00"
+}
+
+
+
+
+/api/TestUsers/Authorization
+/api/TestUsers/Registration
+/api/TestUsers/Cabinets
+/api/TestUsers/CreateCabinet
+
+
+https://fkk2jrbf-7259.euw.devtunnels.ms/api/TestUsers/Authorization?login=user3&password=123
+https://fkk2jrbf-7259.euw.devtunnels.ms/api/TestUsers/Registration?name=user4&mail=user4%40mail.com&telephone=%2B7%20999%20%28999%29%209999&password=123
+https://fkk2jrbf-7259.euw.devtunnels.ms/api/TestUsers/Cabinets?key=c32a9b5e-c6c5-4e1f-b9c5-9b82c45ad140
+https://fkk2jrbf-7259.euw.devtunnels.ms/api/TestUsers/CreateCabinet?key=c32a9b5e-c6c5-4e1f-b9c5-9b82c45ad140&name=user3&token=c32a9b5e-c6c5-4e1f-b9c5-9b82c45ad140
+https://fkk2jrbf-7259.euw.devtunnels.ms/api/TestUsers/SelectCabinet?key=c32a9b5e-c6c5-4e1f-b9c5-9b82c45ad140&name=user3
+https://fkk2jrbf-7259.euw.devtunnels.ms/api/TestUsers/CabinetProducts?key=c32a9b5e-c6c5-4e1f-b9c5-9b82c45ad140
+
+
+
+user4
+user4@mail.com
++7 999 (999) 9999
+123
+
+
+user5
+user5@mail.com
++7 999 (999) 9999
+123
+
+
+user6
+user6@mail.com
++7 999 (999) 9998
+123
+
+
+
+{
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+  "title": "One or more validation errors occurred.",
+  "status": 400,
+  "errors": {
+    "password": [
+      "The password field is required."
+    ],
+    "telephone": [
+      "The telephone field is required."
+    ]
+  },
+  "traceId": "00-d5a1947fc58f478474d5c8b2b39465ce-9b76d81b62e10af1-00"
+}

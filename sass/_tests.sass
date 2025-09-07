@@ -1,0 +1,93 @@
+.tests
+    font-family: "Inter", sans-serif
+    &__tabs
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 10px
+        &-item
+            font-size: 12px
+            text-transform: uppercase
+            width: 16.6666%
+            text-align: center
+            padding: 5px 5px 5px 0
+            cursor: pointer
+            user-select: none
+            font-weight: 500
+            &.active
+                color: #2E90FA
+                border-bottom: 1px solid #2E90FA
+    &__tables
+        & table, & th, & td
+            border: none
+            & thead
+                & th
+                    font-size: 12px
+                    text-transform: uppercase
+                    color: #717680
+                    font-weight: 400
+                    height: 52px
+                    background: #FAFAFA
+                    border-bottom: 1px solid #D5D7DA
+                    &.status
+                        position: relative
+                        cursor: pointer
+                        & svg
+                            position: absolute
+                            right: 5px
+                            top: 12px
+            & tbody
+                & tr
+                    border-bottom: 1px solid #E9EAEB
+                    & td
+                        font-size: 14px
+                        padding: 12px
+                        &.archive
+                            color: #414651
+                            & span
+                                background: #F5F5F5
+                                &::before
+                                    background: #717680 !important
+                        &.error
+                            color: #B42318
+                            & span
+                                background: #FEF3F2
+                                &::before
+                                    background-color: #F04438 !important
+                        &.complete
+                            color: #027A48
+                            & span
+                                background: #ECFDF3
+                                &::before
+                                    background-color: #12B76A !important
+                        &.in-progress
+                            color: #B54708
+                            & span
+                                background: #FFFAEB
+                                &::before
+                                    background-color: #F79009 !important
+                        &:nth-child(2), &:nth-child(3)
+                            & a
+                                color: #2E90FA
+                        &:nth-child(6)
+                            font-weight: 500
+                            & span
+                                position: relative
+                                // background: #F5F5F5
+                                padding: 2px 8px 2px 20px
+                                border-radius: 16px
+                                &::before
+                                    position: absolute
+                                    content: ''
+                                    width: 8px
+                                    height: 8px
+                                    background: #717680
+                                    border-radius: 50%
+                                    left: 7px
+                                    top: 55%
+                                    transform: translateY(-50%)
+                        
+                        & a
+                            text-decoration: none
+                    &:nth-child(even)
+                        background: #FAFAFA

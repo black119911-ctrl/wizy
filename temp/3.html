@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Попап</title>
+    <style>
+        .popup {
+            visibility: hidden;     /* делаем элемент визуально скрытым */
+            opacity: 0;             /* полная прозрачность */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* центрируем */
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            transition: opacity 0.3s ease-in-out; /* добавляем плавный переход */
+        }
+
+        .popup.show {
+            visibility: visible;    /* видим элементом */
+            opacity: 1;             /* максимальная прозрачность */
+        }
+    </style>
+</head>
+<body>
+
+<button id="openPopup">Открыть PopUp</button>
+
+<div class="popup">
+    <h2>Привет!</h2>
+    <p>Это пример плавного появления попапа.</p>
+    <button id="closePopup">Закрыть</button>
+</div>
+
+<script>
+    const openButton = document.getElementById("openPopup");
+    const closeButton = document.getElementById("closePopup");
+    const popup = document.querySelector(".popup");
+
+    openButton.addEventListener("click", () => {
+        popup.classList.add("show");
+    });
+
+    closeButton.addEventListener("click", () => {
+        popup.classList.remove("show");
+    });
+</script>
+
+</body>
+</html>

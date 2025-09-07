@@ -1,0 +1,95 @@
+.promo
+    &__list
+        display: flex
+        flex-direction: column
+        &-item
+            display: flex
+            align-items: center
+            justify-content: space-between
+            text-decoration: none
+            border-bottom: 1px solid #E9EAEB
+            padding: 16px 24px 16px 12px
+            &.active
+                background: #FAFAFA
+                & > .promo__list-item-name
+                        color: #17632B
+            &.error
+                background: #FEF3F2
+                & > .promo__list-item-name
+                        color: #A7170B
+    &__active
+        &-table
+            margin-bottom: 10px
+            // max-width: calc(100vw - 260px)
+            & table
+                // width: 2000px
+                border: none
+                & th, & td
+                    border: none
+                & thead
+                    & th
+                        font-size: 12px
+                        color: #535862
+                        text-transform: uppercase
+                        border: none
+                        min-width: 140px
+                & tbody
+                    & tr
+                        & td
+                            font-size: 14px
+                            vertical-align: middle
+                            padding: 8px 12px
+                            text-align: right
+                            & i
+                                top: -6px
+                        &:first-child
+                            color: #535862
+                            text-transform: uppercase
+                            & td
+                                font-size: 12px
+                                height: 70px
+                                vertical-align: top
+                                & i
+                                    top: 20px
+                                &:nth-child(2)
+                                    text-align: left
+            &-inner
+                box-shadow: inset -5px 0 7px #0000001A
+                border-radius: 8px
+                padding: 5px 5px 5px 0
+                // width: 100%
+                // overflow-x: auto
+                & .grey
+                    background: #FAFAFA
+                    border-bottom: 1px solid #D5D7DA
+                & .orange
+                    background: #FFF9F4
+                    border-bottom: 1px solid #FFCDA9
+                & .product-info
+                    display: flex
+                    align-items: center
+                    text-align: left
+                    & img
+                        margin-right: 10px
+                        cursor: pointer
+                & .article
+                    & a
+                        color: #418BFF
+                        text-decoration: none
+                & .red
+                    font-weight: 500
+                    color: #D92D20
+                & .green
+                    font-weight: 500
+                    color: #039855
+            &.modify
+                & table
+                    & tbody
+                        & tr
+                            &:first-child
+                                & td
+                                    &:first-child
+                                        text-align: left
+                                    &:nth-child(2)
+                                        text-align: right
+                                        

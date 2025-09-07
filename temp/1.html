@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* Основной контейнер */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Ограничиваем максимальную ширину */
+    margin: 0 auto; /* Центрируем контейнер горизонтально */
+}
+
+/* Строки (родители для блока) */
+.row {
+    display: flex;          /* Включаем режим Flexbox */
+    justify-content: space-between; /* Равномерное распределение пространства между элементами */
+    gap: 20px;              /* Расстояние между блоками */
+    margin-bottom: 20px;    /* Интервал между рядами */
+}
+
+/* Блоки внутри строки */
+.block {
+    flex-basis: calc(25% - 20px); /* Каждому блоку выделяется четверть ширины родителя минус отступ */
+    height: 150px;               /* Высота блока */
+    background-color: lightblue; /* Цвет фона */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,.1); /* Легкая тень */
+}
+
+/* Корректировка последнего ряда */
+.row:last-child {
+    margin-bottom: 0;           /* Убираем нижний отступ у последней строки */
+}
+    </style>
+    <div class="container">
+    <div class="row">
+        <div class="block">1</div>
+        <div class="block">2</div>
+        <div class="block">3</div>
+        <div class="block">4</div>
+    </div>
+    <div class="row">
+        <div class="block">5</div>
+        <div class="block">6</div>
+        <div class="block">7</div>
+        <div class="block">8</div>
+    </div>
+    <div class="row">
+        <div class="block">9</div>
+        <div class="block">10</div>
+        <div class="block">11</div>
+        <div class="block">12</div>
+    </div>
+</div>
+</body>
+</html>

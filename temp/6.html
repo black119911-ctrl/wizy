@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица с перетаскиванием столбцов</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+
+<body>
+    <style>
+        #table-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .column {
+            flex-grow: 1;
+            min-width: 100px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: white;
+            background-color: #6c7ae0;
+            text-align: center;
+            user-select: none;
+            transition: transform 0.1s ease-in-out;
+        }
+
+        .dragged {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            filter: brightness(1.2);
+        }
+
+        .placeholder {
+            background-color: #aaa;
+            visibility: hidden;
+        }
+
+        .row.moveable .placeholder {
+            visibility: visible;
+        }
+    </style>
+    <div id="table-container">
+        <div class="row">
+            <div class="column">Колонка 1</div>
+            <div class="column">Колонка 2</div>
+            <div class="column">Колонка 3</div>
+        </div>
+        <div class="row">
+            <div class="column">Элемент 1</div>
+            <div class="column">Элемент 2</div>
+            <div class="column">Элемент 3</div>
+        </div>
+    </div>
+
+    <!-- Подключаем библиотеку interact.js -->
+    <script src="https://unpkg.com/interactjs@1.10.27/dist/interact.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const columns = document.querySelectorAll(".column");
+            const rows = document.querySelectorAll(".row");
+
+            interact('.column')
+                .draggable({
+                    onstart(event) {
+                        event.target.classList.add('dragged'); // Используем event.target
+                        console.log(`Начало перетаскивания ${event.target.textContent}`);
+                    },
+                    onmove(event) {
+                        handleMove(event.target, event.dx);
+                    },
+                    onend(event) {
+                        event.target.classList.remove('dragged'); // Аналогично для снятия класса
+                        resetPlaceholders();
+                        console.log(`Завершилось перетаскивание`);
+                    }
+                })
+                .resizable({
+                    // edges: { left: true, right: true },
+                    restrictEdges: false,
+                    preserveAspectRatio: false
+                });
+
+            function handleMove(target, dx) {
+                const colIndex = [...target.parentNode.children].indexOf(target);
+                const nextColIndex = Math.round(colIndex + dx / 100); // Коэффициент для плавности
+
+                if (nextColIndex !== colIndex && isValidIndex(nextColIndex)) {
+                    insertAtPosition(target, nextColIndex);
+                }
+            }
+
+            function insertAtPosition(el, pos) {
+                el.parentNode.insertBefore(el, el.parentNode.children[pos]);
+            }
+
+            function isValidIndex(index) {
+                return index >= 0 && index <= columns.length;
+            }
+
+            function resetPlaceholders() {
+                for (const row of rows) {
+                    row.classList.remove('moveable');
+                }
+            }
+        });
+
+
+    
+    </script>
+</body>
+
+</html>

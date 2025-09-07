@@ -1,0 +1,169 @@
+// document.addEventListener('DOMContentLoaded', async () => {
+//     const loadingScreen = document.getElementById('loading-screen');
+//     const authForm = document.querySelector('#auth-form')
+
+//     // Показываем загрузочный экран
+//     authForm.style.display = 'none'
+//     loadingScreen.style.display = 'flex';
+
+//     const token = getCookie('authToken');
+
+//     if (token) {
+
+
+//         const params = new URLSearchParams({
+//             email: email,
+//             password: password
+//         }).toString();
+
+
+//         try {
+//             // const response = await fetch('/server/auth.php', {
+//             const response = await fetch(`https://gnzcfxqx-7259.euw.devtunnels.ms/api/TestUsers/Authorization?${params}`, {
+//             // const response = await fetch(`/server/test.php?${params}`, {
+//                 method: 'GET'
+//             });
+
+
+//             const result = await response.json();
+//             console.log(data);
+
+            
+//             // return;
+
+
+//             if (result.valid) {
+//                 // Токен валиден, скрываем загрузочный экран и переходим на дашборд
+//                 loadingScreen.style.display = 'none';
+//                 window.location.href = '/dashboard.html';
+//             } else {
+//                 // Токен невалиден, очищаем состояние авторизации и показываем форму
+//                 // clearAuthState();
+
+//                 deleteCookie('authToken')
+
+
+//                 loadingScreen.style.display = 'none';
+//                 authForm.style.display = 'flex'
+//             }
+//         } catch (err) {
+//             console.error(err);
+//             // clearAuthState();
+
+//             deleteCookie('authToken')
+
+//             loadingScreen.style.display = 'none';
+//             authForm.style.display = 'flex'
+//         }
+//     } else {
+//         // Токен отсутствует, прячем загрузочный экран и показываем форму авторизации
+//         loadingScreen.style.display = 'none';
+//         authForm.style.display = 'flex'
+//     }
+// });
+
+
+function deleteCookie(name) {
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+}
+
+
+function getCookie(name) {
+    const matches = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return matches ? decodeURIComponent(matches[2]) : undefined;
+}
+
+function setCookie(name, value, options = {}) {
+    options = {
+        path: '/',
+        sameSite: 'strict',
+        secure: true,
+        expires: new Date(Date.now() + 3600 * 1000),
+        ...options
+    };
+
+    let updatedCookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+
+    Object.entries(options).forEach(([key, value]) => {
+        updatedCookie += '; ' + key;
+        if (value !== true) {
+            updatedCookie += '=' + value;
+        }
+    });
+
+    document.cookie = updatedCookie;
+}
+
+function removeCookie(name) {
+    setCookie(name, '', { expires: '-1 day' });
+}
+
+function clearAuthState() {
+    removeCookie('authToken');
+}
+
+
+document.getElementById('loginForm').addEventListener('submit', async function (event) {
+    event.preventDefault(); // Отменяем перезагрузку страницы
+
+    const email = document.getElementById('emailInput').value.trim();
+    const password = document.getElementById('passwordInput').value.trim();
+
+
+    if (!email || !password) {
+        // document.getElementById('message').innerText = 'Необходимо заполнить оба поля.';
+        console.log('Необходимо заполнить оба поля.');
+        return;
+    }
+
+    
+    const url = 'https://3dwrgcmx-7259.euw.devtunnels.ms/api/TestUsers/Authorization'
+    
+
+
+    // Формируем параметры для GET-запроса
+    const params = new URLSearchParams({
+        login: email,
+        password: password
+    }).toString();
+
+    // Отправляем GET-запрос на сервер
+    try {
+        const response = await fetch(`${url}?${params}`, {
+            method: 'GET'
+        });
+
+        if (!response.ok) {
+            throw new Error('Ошибка сети');
+        }
+
+        const data = await response.json();
+
+
+
+        if (data.result && data.token.isValid) {
+            // Токен успешно получен, пишем его в cookie
+
+            writeCookie(data.token.key, data.token.expirationDate);
+
+            // Переходим на страницу личного кабинета или любую другую защищённую страницу
+            window.location.href = '/cabinet.html';
+        } else {
+            alert("Логин или пароль неверны!");
+        }
+
+    } catch (error) {
+        console.log(error);
+    }
+
+});
+
+
+function writeCookie(tokenKey, expirationDate) {
+    const dateObj = new Date(expirationDate);
+    const expiresStr = dateObj.toUTCString(); // Преобразуем дату в нужный формат
+
+    // Записываем cookie с параметрами безопасности
+    // document.cookie = `authToken=${tokenKey}; Expires=${expiresStr}; Path=/; HttpOnly; Secure; SameSite=Lax`;
+    document.cookie = `authToken=${tokenKey}; Expires=${expiresStr} Secure;`;
+}

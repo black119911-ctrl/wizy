@@ -1,0 +1,192 @@
+.tests
+    &__create
+        max-width: 770px
+        width: 100%
+        &-stages
+            padding-left: 40px
+            &-item
+                position: relative
+                padding: 10px
+                & .create-test-btn
+                    margin-top: 10px
+                &-progress
+                    position: absolute
+                    left: -33px
+                    top: 24px
+                    height: 100%
+                    & .point
+                        position: absolute
+                        width: 15px
+                        height: 15px
+                        content: ''
+                        background: #A4A7AE
+                        border-radius: 50%
+                        border: 3px solid #F5F5F5
+                    & .line
+                        position: absolute
+                        content: ''
+                        height: calc( 100% - 10px )
+                        top: 12px
+                        width: 7px
+                        background: #A4A7AE
+                        border: 3px solid #F5F5F5
+                        left: 4px
+                        &.short
+                            height: calc( 100% - 60px )
+                    &.complete
+                        & > .line, & > .point
+                            background: #12B76A
+                            border-color: #ECFDF3
+                    &.current-stage
+                        & > .line, & > .point
+                            background: #F79009
+                            border-color: #FFFAEB
+                &__top
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    margin-bottom: 16px
+                    padding: 4px
+                    background: #FAFAFA
+                    border-radius: 8px
+                    max-height: 44px
+                    &.choose-photo
+                        padding: 10px 12px
+                    &.unset-top
+                        margin-bottom: 0
+                &__select
+                    max-width: 340px
+                    width: 100%
+                &__selected-products
+                    &-item
+                        display: flex
+                        align-items: center
+                        padding: 10px
+                        max-width: 300px
+                        width: 100%
+                        border: 1px solid #E9EAEB
+                        border-radius: 8px
+                        font-size: 14px
+                        line-height: 1.5
+                        &-image
+                            margin-right: 12px
+                            & img
+                                max-width: none
+                &__select
+                    & .custom-select .has-image
+                        & a
+                            display: flex
+                            align-items: center
+                        & img
+                            width: 18px
+                            height: 25px
+                            border-radius: 3px
+                            object-fit: contain
+                            margin-right: 8px
+                &__action-name
+                    display: flex
+                    align-items: center
+                    & .icon-bg
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        width: 24px
+                        height: 24px
+                        border-radius: 50%
+                        margin-right: 12px
+                        &.green
+                            background: #ECFDF3
+                        &.orange
+                            background: #FFFAEB
+                        &.gray
+                            background: #F5F5F5
+                &__files
+                    &-count
+                        & span
+                            color: #DC6803
+                            font-weight: 500
+                &__drag-drop
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    margin: 20px
+                    border: 2px dashed #418BFF
+                    cursor: pointer
+                    padding: 40px
+                    &-text
+                        text-align: center
+                        & p
+                            font-weight: 500
+                        & .font-14
+                            font-size: 14px
+                            color: #868A9A
+                        & .font-12
+                            font-size: 12px
+                            color: #848994
+                        & .blue
+                            color: #418BFF
+                    &-image
+                        margin-bottom: 7px
+                &__uploaded-images
+                    display: flex
+                    align-items: center
+                    margin: 0 20px
+                    &-item
+                        display: flex
+                        position: relative
+                        width: max-content
+                        margin-right: 10px
+                        & .remove-btn
+                            position: absolute
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            color: #B42318
+                            width: 24px
+                            height: 24px
+                            background: #FEF3F2
+                            border-radius: 8px
+                            cursor: pointer
+                            font-size: 23px
+                            right: -10px
+                            top: -10px
+                &__input-testname
+                    max-width: 340px
+                    width: 100%
+                    & input
+                        font-size: 14px
+                        padding: 8px 14px
+                        height: auto
+                        cursor: text
+                &__display-settings
+                    &-field
+                        display: flex
+                        align-items: center
+                        margin-bottom: 17px
+                        &-range
+                            max-width: 304px
+                            width: 100%
+                            margin-right: 13px
+                        &-input
+                            max-width: 57px
+                            width: 100%
+                            & input
+                                font-family: "Inter", sans-serif
+                                border: 1px solid #E1E6EF
+                                border-radius: 8px
+                                color: #848994
+                                outline: none
+                                font-size: 14px
+                                padding: 4px 9px
+                                width: 100%
+                        & .custom-input-range
+                            display: grid
+                            gap: 8px
+                            height: 12px
+                            overflow: hidden
+                            width: 304px
+                        & label
+                            display: flex
+                            margin-bottom: 15px
+                            font-size: 14px
+                            font-weight: 400

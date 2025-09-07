@@ -1,0 +1,462 @@
+.dashboard
+    &__head
+        &-top
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-bottom: 20px
+            &-title
+                display: flex
+                align-items: center
+                font-size: 19px
+                line-height: 1.5
+                font-weight: 600
+                color: #1E1F2A
+                & .dashboard-tooltip
+                    margin-left: 20px
+                    margin-right: 16px
+                    color: #717680
+            &-options
+                display: flex
+                align-items: center
+                button
+                    color: #717680
+                    border-radius: 8px
+                    font-size: 15px
+                    line-height: 1.2
+                    font-weight: 600
+                    user-select: none
+                &__dates
+                    position: relative
+                    padding: 8px 16px 8px 38px
+                    border: 1px solid #D5D7DA
+                    background: #fff
+                    margin-right: 8px
+                    &::before
+                        position: absolute
+                        left: 13.8px
+                        top: 50%
+                        transform: translateY(-50%)
+                        content: ''
+                        background: url('../images/svg/calendar.svg') no-repeat center center
+                        background-size: contain
+                        width: 14.4px
+                        height: 14.4px
+                &__filters
+                    display: flex
+                    align-items: center
+                    position: relative
+                    padding: 7px 16px 7px 43px
+                    border: 1px solid transparent
+                    background: #fff
+                    margin-right: 8px
+                    &::before
+                        position: absolute
+                        content: ''
+                        left: 17.8px
+                        top: 50%
+                        width: 14.4px
+                        height: 14.4px
+                        transform: translateY(-50%)
+                        background: url('../images/svg/filter-grey.svg') no-repeat center center
+                        background-size: contain
+                    & .quant
+                        color: #E86821
+                        background: #F5F5F5
+                        border-radius: 50%
+                        width: 20px
+                        height: 20px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        font-size: 10px
+                        font-weight: 700
+                        line-height: 1
+                        margin-left: 8px
+                &__reset
+                    border: none
+                    color: #717680
+                    width: 20px
+                    height: 20px
+                    & svg
+                        width: 14px
+                        height: 16px
+        &-bottom
+            padding: 14px 30px
+            border-bottom: 1px solid #D5D7DA
+            margin-bottom: 32px
+            &__filters
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                &-item
+                    display: flex
+                    align-items: center
+                    border-radius: 16px
+                    margin-right: 12px
+                    background: #fff
+                    color: #414651
+                    padding: 4px 10px 4px 12px
+                    & .text
+                        margin-right: 4px
+                        font-size: 14px
+                        line-height: 1.42
+                        font-weight: 500
+                    & .close
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        border: none
+                        width: 12px
+                        height: 12px
+                        background: none
+                    &.reset
+                        background: #FEF3F2
+                        color: #B42318
+                        margin-right: 0
+                        & .close
+                            color: #F04438
+    &__content
+        display: flex
+        &-left
+            width: calc( 100% - 496px )
+            &.adaptive
+                width: 100%
+            &__top
+                display: flex
+                align-items: flex-start
+                justify-content: space-between
+                flex-wrap: wrap
+                &-item
+                    padding: 24px 28px 32px 28px
+                    width: calc( 50% - 16px )
+                    min-width: 572px
+                    box-shadow: 0px 2px 4px -2px #0A0D1205
+                    box-shadow: 0px 4px 8px 6px #0A0D120F
+                    margin-right: 16px
+                    margin-bottom: 16px
+                    border-radius: 8px
+                    background: #fff
+                    color: #1E1F2A
+                    &-title
+                        font-size: 19px
+                        line-height: 1.25
+                        font-weight: 600
+                    &-head
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        margin-bottom: 12px
+                        & .orders-tooltip
+                            color: #fff
+                            border: none
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            background: none
+                            &.black
+                                color: #717680
+                        &-right
+                            display: flex
+                            align-items: center
+                            & .text-right
+                                font-weight: 500
+                                font-size: 19px
+                                line-height: 24px
+                                margin-right: 84px
+                    &.orders
+                        background: radial-gradient(101.42% 101.42% at 100% 3.16%, #FF8D28 36.93%, #F96D22 100%)
+                        color: #fff
+                    &.sales
+                        background: #418BFF
+                        color: #fff
+                    &-info
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        &-block
+                            display: inline-flex
+                            flex-direction: column
+                            border-right: 1px solid #fff
+                            width: 33.33%
+                            &.middle
+                                padding-left: 4%
+                            &.last
+                                border-right: none
+                                padding-left: 4%
+                            &.black-border
+                                border-right-color: #CFCFCF
+                            &.pl-2prcnt
+                                padding-left: 2%
+                        & .quantity
+                            font-size: 27px
+                            line-height: 32px
+                            font-weight: 500
+                            margin-bottom: 8px
+                        & .data
+                            display: flex
+                            align-items: center
+                            font-size: 17px
+                            line-height: 20px
+                            & .percent
+                                position: relative
+                                background: #fff
+                                border-radius: 12px
+                                padding: 3px 8px 3px 26px
+                                margin-right: 8px
+                                font-weight: 500
+                                &::before
+                                    position: absolute
+                                    left: 9px
+                                    top: 50%
+                                    transform: translateY(-50%)
+                                    content: ''
+                                    width: 10px
+                                    height: 16px
+                                    background-size: cover !important
+                                &.green
+                                    color: #027A48
+                                    &::before
+                                        background: url('../images/svg/green-arrow-up.svg') no-repeat center center
+                                    &-bg
+                                        background: #ECFDF3
+                                &.red
+                                    color: #B42318
+                                    &::before
+                                        background: url('../images/svg/red-arrow-down.svg') no-repeat center center
+                                    &-bg
+                                        background: #FEF3F2
+            &__bottom
+                display: flex
+                align-items: center
+                justify-content: space-between
+                flex-wrap: wrap
+                width: 100%
+                &-wrap
+                    display: flex
+                    align-items: flex-start
+                    margin-right: 16px
+                    & #marginal-parent-adaptive
+                        max-width: 496px
+                        width: 100%
+                        &.adaptive
+                            width: 0
+                    &.adaptive
+                        margin-right: 0 !important
+                &-item
+                    position: relative
+                    display: inline-flex
+                    background: #fff
+                    border-radius: 8px
+                    box-shadow: 0px 2px 4px -2px #0A0D1205
+                    box-shadow: 0px 4px 8px 6px #0A0D120F
+                    padding: 28px 24px 32px 28px
+                    width: calc( 33% - 16px )
+                    // min-width: 408px
+                    margin-bottom: 16px
+                    margin-right: 16px
+                    &.adaptive
+                        width: calc( 50% - 16px )
+                    &-block
+                        width: 50%
+                        &.first
+                            margin-right: 8px
+                        & .title
+                            font-size: 19px
+                            line-height: 24px
+                            font-weight: 600
+                            color: #242533
+                            margin-bottom: 12px
+                        & .value
+                            margin-bottom: 8px
+                            color: #1E1F2A
+                            font-size: 27px
+                            line-height: 32px
+                            font-weight: 500
+                        & .difference
+                            & .percent
+                                position: relative
+                                border-radius: 12px
+                                padding: 3px 8px 3px 26px
+                                margin-right: 8px
+                                &::before
+                                    position: absolute
+                                    content: ''
+                                    left: 9px
+                                    top: 50%
+                                    transform: translateY(-50%)
+                                    width: 10px
+                                    height: 16px
+                                    background-size: cover !important
+                                &.red
+                                    color: #B42318
+                                    background: #FEF3F2
+                                    &::before
+                                        background: url('../images/svg/red-arrow-down.svg') no-repeat center center
+                                &.green
+                                    color: #027A48
+                                    background: #ECFDF3
+                                    &::before
+                                       background: url('../images/svg/green-arrow-up.svg') no-repeat center center
+                            & .text
+                                color: #535862
+                    & .tooltip-variant
+                        position: absolute
+                        border: none
+                        background: none
+                        right: 30px
+                        top: 34px
+                        content: ''
+                        width: 12px
+                        height: 12px
+                        color: #A4A7AE
+        &-right
+            max-width: 496px
+            // max-width: 505px
+            width: 33%
+            margin-bottom: 16px
+            height: 100%
+            &.adaptive
+                width: auto
+.marginal-goods
+    background: #fff
+    padding: 24px 24px 40px 24px
+    box-shadow: 0px 2px 4px -2px #0A0D1205
+    box-shadow: 0px 4px 8px 6px #0A0D120F
+    border-radius: 8px
+    height: 100%
+    &.adaptive
+        height: 500px
+    &__top
+        display: flex
+        flex-direction: column
+        margin-bottom: 24px
+        &.adaptive
+            margin-bottom: 20px
+        &-title
+            font-size: 19px
+            line-height: 24px
+            font-weight: 600
+            color: #1E1F2A
+            margin-bottom: 4px
+            &.adaptive
+                font-size: 16px
+        &-subtitle
+            font-size: 15px
+            line-height: 18px
+            color: #848994
+            font-weight: 500
+            &.adaptive
+                font-size: 12px
+    &__content
+        &-first
+            display: flex
+            align-items: flex-start
+            margin-bottom: 24px
+            &.adaptive
+                margin-bottom: 20px
+            &-image
+                margin-right: 12px
+                max-width: 165px
+                max-height: 220px
+                & img
+                    width: 100%
+                    height: 100%
+                    border-radius: 8px
+                &.adaptive
+                    max-width: 96px
+                    max-height: 128px
+            &-info
+                &-title
+                    font-size: 19px
+                    line-height: 24px
+                    font-weight: 600
+                    color: #1E1F2A
+                    margin-bottom: 4px
+                    &.adaptive
+                        font-size: 14px
+                        line-height: 18px
+                &-article
+                    color: #848994
+                    font-weight: 400
+                    font-size: 17px
+                    line-height: 20px
+                    margin-bottom: 12px
+                &-price
+                    font-size: 23px
+                    line-height: 1
+                    font-weight: 600
+                    color: #1E1F2A
+                    &.adaptive
+                        font-size: 20px
+        &-list
+            &-item
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin-bottom: 16px
+                &-data
+                    display: flex
+                    align-items: center
+                    margin-right: 8px
+                &-photo
+                    display: inline-flex
+                    margin-right: 8px
+                    width: 50px
+                    height: 67px
+                    & img
+                        width: 100%
+                        height: 100%
+                        object-fit: contain
+                        border-radius: 4px
+                    &.adaptive
+                        width: 30px
+                        height: 40px
+                &-title
+                    font-size: 15px
+                    font-weight: 500
+                    line-height: 20px
+                    color: #848994
+                    &.adaptive
+                        font-size: 12px
+                        line-height: 15px
+                &-price
+                    color: #535862
+                    font-size: 17px
+                    line-height: 20px
+                    font-weight: 500
+                    &.adaptive
+                        font-size: 14px
+
+@media (max-width: 1550px)
+    .dashboard
+        &__content
+            &-left
+                &__top
+                    &-item
+                        &-title
+                            font-size: 16px
+                        &-info
+                            & .quantity
+                                font-size: 24px
+                            & .data
+                                font-size: 14px
+                &__bottom
+                    &-item
+                        &-block
+                            & .title
+                                font-size: 16px
+                                margin-bottom: 8px
+                            & .value
+                                font-size: 24px
+                            & .difference
+                                font-size: 14px
+                                & .percent
+                                    margin-right: 3px
+    .marginal-goods
+        &.adaptive
+            height: 480px
+
+
+@import dashboard-filters
+@import dashboard-dates

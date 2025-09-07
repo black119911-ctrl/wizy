@@ -1,0 +1,88 @@
+.dashboard
+    &__chart
+        width: calc( 100% - 16px )
+        background: #fff
+        padding: 24px
+        border-radius: 12px
+        &-top
+            display: flex
+            align-items: center
+            justify-content: space-between
+            // margin-bottom: 24px
+            padding-bottom: 21px
+            border-bottom: 1px solid #E9EAEB
+            &-title
+                color: #181D27
+                font-size: 23px
+                font-weight: 600
+            &-filters
+                display: flex
+                align-items: center
+                &__item
+                    width: 142px
+                    &:first-child
+                        margin-right: 16px
+                        width: 190px
+        &-bottom
+            display: flex
+            align-items: flex-start
+            justify-content: space-between
+        &-canvas
+            position: relative
+            width: 100%
+            height: 462px
+            & #myChart
+                height: 100%
+        &-sidebar
+            min-width: 194px
+            margin-right: 24px
+            margin-top: 40px
+            &-filter
+                margin-bottom: 16px
+                &__title
+                    & .text
+                        margin-left: 24px
+                        margin-bottom: 8px
+                        font-size: 17px
+                        line-height: 20px
+                        font-weight: 500
+                        color: #414651
+                &__value
+                    margin-left: 24px
+                    margin-bottom: 8px
+                    & .value
+                        font-size: 19px
+                        line-height: 24px
+                        font-weight: 600
+                        color: #1E1F2A
+                        margin-right: 8px
+                        &.grey
+                            color: #848994
+                    &.desc
+                        color: #848994
+                        font-size: 15px
+                        line-height: 20px
+                        font-weight: 500
+                    & .percent
+                        position: relative
+                        font-size: 15px
+                        line-height: 20px
+                        font-weight: 600
+                        padding-left: 16px
+                        &::before
+                            position: absolute
+                            content: ''
+                            background-size: cover !important
+                            width: 7px
+                            height: 11px
+                            left: 3.5px
+                            top: 50%
+                            transform: translateY(-50%)
+                        &.green
+                            color: #027A48
+                            &::before
+                                background: url('../images/svg/green-arrow-up.svg') no-repeat center center
+                        &.red
+                            color: #B42318
+                            &::before                                
+                                background: url('../images/svg/red-arrow-down.svg') no-repeat center center
