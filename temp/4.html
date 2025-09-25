@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Перемещение столбцов таблицы</title>
+    <style>
+        .table {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .row {
+            display: table-row;
+        }
+
+        .cell {
+            display: table-cell;
+            padding: 8px;
+            text-align: center;
+            cursor: move;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+        }
+
+        .ghost {
+            position: fixed;
+            pointer-events: none;
+            opacity: 0.5;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table">
+        <div class="row">
+            <div class="cell">Столбец 1</div>
+            <div class="cell">Столбец 2</div>
+            <div class="cell">Столбец 3</div>
+        </div>
+        <div class="row">
+            <div class="cell">Значение 1</div>
+            <div class="cell">Значение 2</div>
+            <div class="cell">Значение 3</div>
+        </div>
+        <div class="row">
+            <div class="cell">Данные 1</div>
+            <div class="cell">Данные 2</div>
+            <div class="cell">Данные 3</div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const rows = document.querySelectorAll('.row');
+            let ghostElement = null;
+            let draggingCell = null;
+            let dragStartX = 0;
+            let initialColumnIndex = 0;
+
+            // создание фантомного элемента (копии)
+            function createGhost(element) {
+                ghostElement = element.cloneNode(true);
+                ghostElement.classList.add('ghost');
+                document.body.appendChild(ghostElement);
+            }
+
+            // удаление фантомного элемента
+            function removeGhost() {
+                if (ghostElement) {
+                    document.body.removeChild(ghostElement);
+                    ghostElement = null;
+                }
+            }
+
+            // получение индекса колонки
+            function getColumnIndex(cell) {
+                return Array.from(cell.parentNode.children).indexOf(cell);
+            }
+
+            // замена всей колонки в каждой строке
+            function swapColumns(columnFrom, columnTo) {
+                for (const row of rows) {
+                    const fromCell = row.children[columnFrom];
+                    const toCell = row.children[columnTo];
+                    row.insertBefore(fromCell, toCell.nextSibling ? toCell : null);
+                }
+            }
+
+            // начало перетаскивания
+            document.querySelectorAll('.cell').forEach((cell) => {
+                cell.addEventListener('mousedown', (event) => {
+                    event.preventDefault();
+                    draggingCell = cell;
+                    dragStartX = event.clientX;
+                    initialColumnIndex = getColumnIndex(cell);
+                    createGhost(cell);
+                });
+            });
+
+            // обработка события mousemove
+            window.addEventListener('mousemove', (event) => {
+                if (!draggingCell) return;
+
+                const currentX = event.clientX;
+                const deltaX = currentX - dragStartX;
+
+                if (ghostElement) {
+                    ghostElement.style.left = `${currentX - ghostElement.offsetWidth / 2}px`;
+                    ghostElement.style.top = `${event.clientY - ghostElement.offsetHeight / 2}px`;
+                }
+
+                if (Math.abs(deltaX) >= 10) {
+                    const newColumnIndex = Math.max(0, Math.min(rows[0].children.length - 1, initialColumnIndex + Math.sign(deltaX)));
+                    swapColumns(initialColumnIndex, newColumnIndex);
+                }
+            });
+
+            // завершение перетаскивания
+            window.addEventListener('mouseup', () => {
+                draggingCell = null;
+                removeGhost();
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!--@import "header.html"-->
+
+<section class="layout">
+	<aside class="sidebar">
+		<div class="sidebar__head">
+			<div class="sidebar__logo"><img src="images/svg/logo-grey.svg" alt=""></div>
+			<div class="sidebar__btn"><i data-svg="images/svg/sidebar.svg"></i></div>
+		</div>
+
+		<div class="sidebar__menu">
+			<div class="sidebar__menu-item active">
+				<a href="#">
+					<i><i data-svg="images/svg/sidebar/dashboard.svg"></i></i>
+					<span>Дашборд</span>
+				</a>
+			</div>
+			<div class="sidebar__menu-item">
+				<a href="#">
+					<i><i data-svg="images/svg/sidebar/product.svg"></i></i>
+					<span>Товары</span>
+				</a>
+			</div>
+			<div class="sidebar__menu-item">
+				<a href="#">
+					<i><i data-svg="images/svg/sidebar/ab-test.svg"></i></i>
+					<span>А/B Тесты</span>
+				</a>
+			</div>
+			<div class="sidebar__menu-item">
+				<a href="#">
+					<i><i data-svg="images/svg/sidebar/unit-eco.svg"></i></i>
+					<span>ЮНИТ-экономика</span>
+				</a>
+			</div>
+			<div class="sidebar__menu-item">
+				<a href="#">
+					<i><i data-svg="images/svg/sidebar/plan.svg"></i></i>
+					<span>План-факт</span>
+				</a>
+			</div>
+			<div class="sidebar__menu-item">
+				<a href="#">
+					<i><i data-svg="images/svg/sidebar/marketng.svg"></i></i>
+					<span>Маркетинг</span>
+				</a>
+			</div>
+			<div class="sidebar__menu-item">
+				<a href="#">
+					<i><i data-svg="images/svg/sidebar/promot.svg"></i></i>
+					<span>Акции</span>
+				</a>
+			</div>
+			<div class="sidebar__menu-item">
+				<a href="#">
+					<i><i data-svg="images/svg/sidebar/house.svg"></i></i>
+					<span>Склады и Подсорт</span>
+				</a>
+			</div>
+			<div class="sidebar__menu-item">
+				<a href="#">
+					<i><i data-svg="images/svg/sidebar/report.svg"></i></i>
+					<span>Фин. отчеты</span>
+				</a>
+			</div>
+		</div>
+	</aside>
+
+	<section class="content">
+		<section class="content__head">
+			<div class="content__head-left">
+				<div class="content__head-block">
+					<a href="#">
+						<span>Кабинет <strong>Одежда и украшения</strong></span>
+						<i><i data-svg="images/svg/chevron-down.svg"></i></i>
+					</a>
+				</div>
+				<div class="content__head-block">
+					<a href="#">
+						<span>Добавить кабинет</span>
+						<i><i data-svg="images/svg/plus.svg"></i></i>
+					</a>
+				</div>
+			</div>
+			<div class="content__head-right">
+				<div class="content__head-block">
+					<span>Осталось: 5 часов 37 минут</span>
+				</div>
+				<div class="content__head-block icon-dark">
+					<a href="#">
+						<span>Выйти</span>
+						<i><i data-svg="images/svg/exit.svg"></i></i>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="cabinet">
+			<div class="cabinet__head bg-white">
+				<i class="tooltip"><i data-svg="images/svg/tooltip.svg"></i></i>
+				<h1>Управление Кабинетами</h1>
+			</div>
+
+			<div class="cabinet__blocks">
+				<div class="cabinet__control cabinet__block bg-white">
+					<div class="cabinet__block-title">Управление Кабинетами</div>
+
+					<div class="cabinet__control-form">
+						<form>
+							<div class="form">
+								<div class="form__row">
+									<label>Имя кабинета</label>
+									<input type="text" class="inputbox" placeholder="Одежда и украшения">
+								</div>
+
+								<div class="form__row">
+									<label>Токен</label>
+									<input type="text" class="inputbox" placeholder="Введите токен ВБ">
+								</div>
+
+								<div class="form__row form__submit">
+									<input type="submit" class="btn" value="Добавить кабинет">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="cabinet__list cabinet__block bg-white">
+					<div class="cabinet__block-title">Добавленные кабинеты <span>4 / 10</span></div>
+					<div class="cabinet__list-items">
+						<div class="cabinet__list-item poor">
+							<div class="cabinet__list-title">Одежда и украшения</div>
+							<div class="cabinet__list-counter"><span>3 дня</span></div>
+							<div class="cabinet__list-btns">
+								<span class="cabinet__list-delete" data-modal="modal-cabinet-delete">Удалить</span>
+								<span class="cabinet__list-refresh" data-modal="modal-cabinet-delete">Обновить</span>
+								<span class="cabinet__list-edit" data-modal="modal-cabinet-edit">Редактировать</span>
+							</div>
+						</div>
+
+						<div class="cabinet__list-item good">
+							<div class="cabinet__list-title">Электроника</div>
+							<div class="cabinet__list-counter"><span>180 дней</span></div>
+							<div class="cabinet__list-btns">
+								<span class="cabinet__list-delete" data-modal="modal-cabinet-delete">Удалить</span>
+								<span class="cabinet__list-refresh" data-modal="modal-cabinet-delete">Обновить</span>
+								<span class="cabinet__list-edit" data-modal="modal-cabinet-edit">Редактировать</span>
+							</div>
+						</div>
+
+						<div class="cabinet__list-item bad">
+							<div class="cabinet__list-title">Мебель</div>
+							<div class="cabinet__list-counter"><span>0 дней</span></div>
+							<div class="cabinet__list-btns">
+								<span class="cabinet__list-delete" data-modal="modal-cabinet-delete">Удалить</span>
+								<span class="cabinet__list-refresh" data-modal="modal-cabinet-delete">Обновить</span>
+								<span class="cabinet__list-edit" data-modal="modal-cabinet-edit">Редактировать</span>
+							</div>
+						</div>
+
+						<div class="cabinet__list-item poor">
+							<div class="cabinet__list-title">Инструменты</div>
+							<div class="cabinet__list-counter"><span>3 дня</span></div>
+							<div class="cabinet__list-btns">
+								<span class="cabinet__list-delete" data-modal="modal-cabinet-delete">Удалить</span>
+								<span class="cabinet__list-refresh" data-modal="modal-cabinet-delete">Обновить</span>
+								<span class="cabinet__list-edit" data-modal="modal-cabinet-edit">Редактировать</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+</section>
+
+<div id="modal-cabinet-delete" class="modal modal-cabinet-delete">
+	<div class="modal__content">
+		<div class="cabinet-delete">
+			<div class="cabinet-delete__icon"><img src="images/svg/alert-circle.svg" alt=""></div>
+			<div class="cabinet-delete__title">Удалить кабинет</div>
+			<div class="cabinet-delete__text">Вы уверены, что хотите удалить кабинет <strong>“Одежда и украшения”</strong>? Это действие невозможно отменить.</div>
+
+			<div class="cabinet-delete__btns">
+				<a href="#" class="btn btn-sm btn-outline cabinet__control-decline">Отмена</a>
+				<a href="#" class="btn btn-sm btn-red cabinet__control-decline">Удалить</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="modal-cabinet-edit" class="modal modal-cabinet-edit">
+	<div class="modal__content">
+		<div class="cabinet__control cabinet__block">
+			<div class="cabinet__block-title">Управление Кабинетами</div>
+
+			<div class="cabinet__control-form">
+				<form>
+					<div class="form">
+						<div class="form__row">
+							<label>Изменить имя кабинета</label>
+							<input type="text" class="inputbox" placeholder="Одежда и украшения">
+						</div>
+
+						<div class="form__row">
+							<label>Изменить токен</label>
+							<input type="text" class="inputbox" placeholder="Введите новый токен ВБ">
+						</div>
+
+						<div class="form__row form__submit">
+							<a href="#" class="btn btn-sm btn-outline cabinet__control-decline">Отмена</a>
+							<input type="submit" class="btn btn-sm" value="Подтвердить">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--@import "footer.html"-->

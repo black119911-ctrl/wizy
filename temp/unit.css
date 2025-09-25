@@ -1,0 +1,35 @@
+.sticky-column-right {
+    display: flex;
+    align-items: center;
+    position: sticky !important;
+    right: 0;
+    z-index: 4;
+}
+
+.sticky-column-left {
+    display: flex;
+    align-items: center;
+    position: sticky !important;
+    left: 0;
+    z-index: 4;
+}
+
+.table__body {
+    position: relative;
+}
+
+.table__head-cell {
+    height: 72px;
+}
+
+.sticky-column-left .table__head-cell {
+    z-index: 20;
+}
+
+.sticky-column-left .table__cell {
+    z-index: 9;
+}
+
+.table__head-cell {
+    z-index: 1;
+}

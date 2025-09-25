@@ -1,0 +1,45 @@
+{
+  "names": [
+    "Мягкие игрушки",
+    "Автомобили"
+  ],
+  "timeLefts": [
+    999,
+    999
+  ],
+  "selectedCabinet": "Автомобили"
+}
+
+
+
+{
+  "result": [
+    {
+      "nmID": 0,
+      "name": "Саша, не торопись!",
+      "photoLink": "https://rusvesna.su/sites/default/files/styles/orign_wm/public/shahtery_dnr.jpg",
+      "category": "Work",
+      "tax": 0,
+      "packaging": 666,
+      "wholesalePrice": 1488
+    },
+    {
+      "nmID": 1,
+      "name": "Ты устал ждать!",
+      "photoLink": "https://i.pinimg.com/736x/57/38/b2/5738b2179070d3bcf4d91593084ad78a.jpg",
+      "category": "Warcraft",
+      "tax": 3,
+      "packaging": 3,
+      "wholesalePrice": 3
+    },
+    {
+      "nmID": 2,
+      "name": "Нужно построить микросервисы!",
+      "photoLink": "https://sun9-78.userapi.com/impg/AI8VJ9r0L0R-m84f1tqT5ZfRIKvwbGrzcBbPWg/oWkLys4bhsg.jpg?size=322x242&quality=95&sign=1cadd1b5f3321cfdc57a08ac0fb7acaa&type=album",
+      "category": "Warcraft",
+      "tax": 3,
+      "packaging": 3,
+      "wholesalePrice": 3
+    }
+  ]
+}

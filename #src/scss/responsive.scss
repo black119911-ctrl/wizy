@@ -1,0 +1,65 @@
+$main: #535862;
+$purple: #7F56D9;
+
+$Gray-100: #F5F5F5;
+$Gray-300: #D5D7DA;
+$Gray-500: #717680;
+$Gray-700: #414651;
+$Gray-900: #181D27;
+
+$Brand-50: #F9F5FF;
+$Brand-300: #D6BBFB;
+$Brand-600: #7F56D9;
+$Brand-700: #6941C6;
+
+@media (max-width: 1023px) {
+    .registration {
+        &__mockup {
+            padding-left: 32px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .authorization {
+        padding: 20px;
+    }
+
+    .registration {
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__head {
+            padding: 20px;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__content {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form {
+            &__head {
+                text-align: center;
+            }
+        }
+
+        &__text {
+            padding: 20px;
+        }
+
+        &__mockup {
+            display: none;
+        }
+    }
+}

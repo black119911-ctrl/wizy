@@ -1,0 +1,92 @@
+Дашборд - фильтры
+Товары - поиск
+AB-тесты - поиск
+Юнитка поиск
+{
+    items: ['Носки', 'Футболки', ...],
+    brands: ['Nike', 'Adidas', ...],
+    articles: [111, 222, 333, ...]
+}
+
+
+Дашборд даты (даты начала и конца фильтрации)
+{
+    filterDates: 
+    {
+        start: timestamp или DATE ISO
+    },
+    {
+        end: timestamp или DATE ISO
+    }
+}
+
+
+Товары (передача фильтров на сервер)
+{
+    id или article: 111,
+    tax: value,
+    package: value,
+    wholesalePrice: value
+}
+
+
+Юнитка - шаблон подсчёта
+{
+    wholesalePrice: {
+        position: number,
+        isSelected: boolean,
+        isFixed: boolean,
+        translate: 'productName'
+    },
+    markup: {
+        position: number,
+        isSelected: boolean,
+        isFixed: boolean,
+        translate: productName
+    },
+    productDiscounts: {
+        position: number,
+        isSelected: boolean,
+        isFixed: boolean,
+        translate: productName
+    },
+    ... другие столбцы юнитки
+}
+
+
+План-факт - юнитка для плана
+{
+    id: 777,
+    ddr: value,
+    ros: value
+}
+
+
+План-факт - План продаж
+{
+    productID: 888,
+    salesmanID: 999,
+    salesPlan: value,
+    dateProduction: value
+}
+
+
+Пагинация (по сути для любой страницы)
+{
+    page: number,
+    offset: number
+}
+
+
+Склады и подсорт - заказ партии
+{
+    productID: number,
+    dateProduction: timestamp | DATE ISO 
+}
+
+
+Склады и подсорт - загруженность складов
+Склады и подсорт - хранение на складах
+{
+    orderby: ASC | DESC
+}

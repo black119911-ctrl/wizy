@@ -1,0 +1,74 @@
+.custom
+    &-select
+        & .selectbox__field
+            background: #fff
+    &-input-range
+        // position: relative
+        appearance: none
+        height: 2px
+        background: none
+        &::-webkit-slider-runnable-track
+            position: relative
+            z-index: 0
+            height: 2px
+            background: #418BFF
+        &::-moz-range-track
+            background: #418BFF
+        &::-webkit-slider-thumb
+            position: relative
+            z-index: 2
+            -webkit-appearance: none
+            width: 12px
+            height: 12px
+            margin-top: -5px
+            border: none
+            border-radius: 50%
+            background: #418BFF
+            transition: .3s
+            cursor: pointer
+            border-image-outset: 0 100vw
+            border-image-repeat: stretch
+            border-image-slice: 0 1
+            border-image-source: linear-gradient(90deg, #418BFF 50%, #d9e8ff 0)
+            border-image-width: calc(50% - 1px) 100vw
+        &::-moz-range-thumb
+            -webkit-appearance: none
+            width: 12px
+            height: 12px
+            margin-top: 0
+            border: none
+            border-radius: 50%
+            background: #418BFF
+            transition: .3s
+            cursor: pointer
+        &::-moz-range-progress
+            // height: 8px
+            // border-radius: 10px
+            // background-color: #c56fff
+        &-wrap
+            position: relative
+            width: 304px
+        &-ticks-bottom
+            position: absolute
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 100%
+            height: 2px
+            top: 5px
+            z-index: -0
+            & span
+                position: absolute
+                content: ''
+                width: 2px
+                height: 2px
+                background: #418BFF
+                border-radius: 50%
+                z-index: -2
+        &-ticks-values
+            display: flex
+            align-items: center
+            justify-content: space-between
+            font-size: 12px
+            font-weight: 500
+            margin-top: 2px

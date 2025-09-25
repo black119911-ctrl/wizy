@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .accordion .item {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .header {
+            padding: 15px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .content {
+            overflow: hidden;
+            padding: 0 15px;
+            max-height: 0;
+            transition: max-height 0.3s cubic-bezier(.4, 0, .2, 1);
+            /* анимация раскрывания */
+        }
+
+        .active .content {
+            max-height: 500px;
+            /* максимальное значение должно превышать реальную высоту содержимого */
+        }
+    </style>
+    <div class="accordion">
+        <div class="item">
+            <div class="header">Заголовок 1</div>
+            <div class="content">Это содержание первого пункта.</div>
+        </div>
+        <div class="item">
+            <div class="header">Заголовок 2</div>
+            <div class="content">Это содержание второго пункта.</div>
+        </div>
+        <div class="item">
+            <div class="header">Заголовок 3</div>
+            <div class="content">Это содержание третьего пункта.</div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.header').forEach(header => {
+            header.addEventListener('click', e => {
+                const currentItem = e.target.closest('.item'); // находим ближайший родительский item
+                const content = currentItem.querySelector('.content');
+
+                // Проверяем активность текущего блока
+                if (!currentItem.classList.contains('active')) {
+                    // закрываем предыдущие активные пункты
+                    document.querySelectorAll('.item.active').forEach(item => {
+                        item.classList.remove('active');
+                    });
+
+                    // открываем выбранный пункт
+                    currentItem.classList.add('active');
+                } else {
+                    // закрыли текущий активный пункт
+                    currentItem.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+user10
+user10@mail.com
+123
+123
+
+
+{
+  "result": true,
+  "token": {
+    "userID": 0,
+    "key": "2d170e52-7c20-423f-9db1-8b513a5f508f",
+    "expirationDate": "2025-09-06T18:57:23.2881309+03:00",
+    "isValid": true
+  }
+}
+
+
+
+{
+  "result": true,
+  "token": {
+    "userID": 0,
+    "key": "f331b662-ed29-4ad9-a990-e9c60cf6fac1",
+    "expirationDate": "2025-09-06T18:57:43.9214407+03:00",
+    "isValid": true
+  }
+}
+
+
+
+user11
+user11@mail.com
+123
+123
+
+
+
+{
+  "result": true,
+  "token": {
+    "userID": 0,
+    "key": "006b4488-b455-4c61-9843-e0ab77263257",
+    "expirationDate": "2025-09-06T19:00:09.366587+03:00",
+    "isValid": true
+  }
+}
+
+
+
+
+user100
+user100@mail.com
+4142
+123123
+
+
+
+user101
+user101@mail.com
++ 7 111 (111) 1111
+101

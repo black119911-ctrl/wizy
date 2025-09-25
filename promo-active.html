@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="favicon.png" type="image/png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Title</title>
+	<link rel="stylesheet" href="styles/fonts.css?ver=6jfg3256" type="text/css" />
+	<link rel="stylesheet" href="styles/jquery.fancybox.css?ver=6jfg3256" type="text/css" />
+	<link rel="stylesheet" href="styles/swiper-bundle.min.css?ver=6jfg3256" type="text/css" />
+	<link rel="stylesheet" href="styles/style.css?ver=6jfg3256" type="text/css" />
+	<link rel="stylesheet" href="styles/responsive.css?ver=6jfg3256" type="text/css" />
+	<link rel="stylesheet" href="sass/wizy.css">
+
+</head>
+
+<body>
+	<section class="layout">
+		<aside class="sidebar">
+			<div class="sidebar__inner">
+				<div class="sidebar__head">
+					<div class="sidebar__logo"><img src="images/svg/logo-grey.svg" alt=""></div>
+					<div class="sidebar__btn"><i data-svg="images/svg/sidebar.svg"></i></div>
+				</div>
+
+				<div class="sidebar__menu">
+					<div class="sidebar__menu-item">
+						<a href="dashboard.html">
+							<i><i data-svg="images/svg/sidebar/dashboard.svg"></i></i>
+							<span>Дашборд</span>
+						</a>
+					</div>
+					<div class="sidebar__menu-item">
+						<a href="products.html">
+							<i><i data-svg="images/svg/sidebar/product.svg"></i></i>
+							<span>Товары</span>
+						</a>
+					</div>
+					<div class="sidebar__menu-item">
+						<a href="tests.html">
+							<i><i data-svg="images/svg/sidebar/ab-test.svg"></i></i>
+							<span>А/B Тесты</span>
+						</a>
+					</div>
+					<div class="sidebar__menu-item">
+						<a href="unit-econom.html">
+							<i><i data-svg="images/svg/sidebar/unit-eco.svg"></i></i>
+							<span>ЮНИТ-экономика</span>
+						</a>
+					</div>
+					<div class="sidebar__menu-item">
+						<a href="plan-fact.html">
+							<i><i data-svg="images/svg/sidebar/plan.svg"></i></i>
+							<span>План-факт</span>
+						</a>
+					</div>
+					<div class="sidebar__menu-item">
+						<a href="marketing.html">
+							<i><i data-svg="images/svg/sidebar/marketng.svg"></i></i>
+							<span>Маркетинг</span>
+						</a>
+					</div>
+					<div class="sidebar__menu-item active">
+						<a href="promo.html">
+							<i><i data-svg="images/svg/sidebar/promot.svg"></i></i>
+							<span>Акции</span>
+						</a>
+					</div>
+					<div class="sidebar__menu-item">
+						<a href="sklad-podsort.html">
+							<i><i data-svg="images/svg/sidebar/house.svg"></i></i>
+							<span>Склады и Подсорт</span>
+						</a>
+					</div>
+					<div class="sidebar__menu-item">
+						<a href="financial.html">
+							<i><i data-svg="images/svg/sidebar/report.svg"></i></i>
+							<span>Фин. отчеты</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</aside>
+
+		<section class="content">
+			<section class="content__head">
+				<div class="content__head-left">
+					<div class="content__head-block dropdown">
+						<a href="#" class="content__head-link" data-dropdown="dropdown-trigger">
+							<!-- <span>Кабинет <strong>Одежда и украшения</strong></span> -->
+							<span>Кабинет <strong></strong></span>
+							<i><i data-svg="images/svg/chevron-down.svg"></i></i>
+						</a>
+
+						<div class="dropdown__block dropdown__list border" id="cabinets-dropdown-list" data-dropdown="dropdown-block">
+							<ul>
+								<!-- <li><a href="#">Не содержит данных</a></li>
+								<li><a href="#">Сумка через плечо</a></li>
+								<li><a href="#">Спортивные кроссовки</a></li>
+								<li><a href="#">Шарф из шерсти альпаки</a></li>
+								<li><a href="#">Часы с кожаным ремешком</a></li>
+								<li><a href="#">Шляпа с широкими полями</a></li>
+								<li><a href="#">Платье в горошек</a></li>
+								<li><a href="#">Кроссовки для бега</a></li>
+								<li><a href="#">Не содержит данных</a></li>
+								<li><a href="#">Сумка через плечо</a></li>
+								<li><a href="#">Спортивные кроссовки</a></li>
+								<li><a href="#">Шарф из шерсти альпаки</a></li>
+								<li><a href="#">Часы с кожаным ремешком</a></li>
+								<li><a href="#">Шляпа с широкими полями</a></li>
+								<li><a href="#">Платье в горошек</a></li>
+								<li><a href="#">Кроссовки для бега</a></li> -->
+							</ul>
+						</div>
+					</div>
+					<div class="content__head-block">
+						<a href="cabinet.html" class="content__head-link">
+							<span>Добавить кабинет</span>
+							<i><i data-svg="images/svg/plus.svg"></i></i>
+						</a>
+					</div>
+				</div>
+				<div class="content__head-right">
+					<div class="content__head-block">
+						<a href="#">Осталось: 5 часов 37 минут</a>
+					</div>
+					<div class="content__head-block icon-dark">
+						<a href="#" class="content__head-link">
+							<span>Выйти</span>
+							<i><i data-svg="images/svg/exit.svg"></i></i>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="panel bg-white">
+				<form class="panel__form">
+					<section class="panel__head">
+						<div class="panel__head-title">
+							<i class="tooltip"><i data-svg="images/svg/tooltip.svg"></i></i>
+							<h1>Акции</h1>
+						</div>
+
+						<div class="panel__head-options">
+							<div class="panel__head-option panel__head-file dropdown">
+								<span class="panel__head-btn" data-dropdown="dropdown-trigger">
+									<i class="icon"><i data-svg="images/svg/file-add.svg"></i></i>
+									<b>Загрузить Excel</b>
+									<i class="icon icon-green"><i data-svg="images/svg/check.svg"></i></i>
+								</span>
+
+								<div class="dropdown__block" data-dropdown="dropdown-block">
+									<div class="form">
+										<div class="form__row">
+											<label class="file btn btn-blue btn-shadow">
+												<input type="file" id="file">
+												<b>Загрузить Excel</b>
+												<i class="icon fill"><i data-svg="images/svg/download.svg"></i></i>
+											</label>
+										</div>
+
+										<div class="form__row">
+											<a href="#" class="btn btn-outline" target="_blank">Скачать шаблон Excel</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="promo__active">
+						<div class="promo__active-table">
+							<div class="promo__active-table-inner">
+								<table>
+									<thead>
+										<tr>
+											<th style="width: 407px;" colspan="3" class="grey">Инфо</th>
+											<th style="width: 650px;" colspan="5" class="orange">Лучшие условия</th>
+											<th class="grey">Текущая юнитка</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="width: 42px;" class="grey">
+												<div class="checkbox">
+													<label class="table-constructor__field-tigger">
+														<input type="checkbox" value=""
+															class="table-constructor__field-input">
+														<span><i><i data-svg="images/svg/check.svg"></i></i></span>
+													</label>
+												</div>
+											</td>
+											<td style="width: 284px;" class="grey">Товар</td>
+											<td style="width: 105px;" class="grey">Артикул</td>
+											<td style="width: 185px;" class="orange">Цена для акции до СПП</td>
+											<td style="width: 111px;" class="orange">ЧП с акцией</td>
+											<td style="width: 136px;" class="orange">Рентабельность с</td>
+											<td style="width: 86px;" class="orange">Разница ЧП</td>
+											<td style="width: 133px;" class="orange">Разница рентабельности %</td>
+											<td class="grey">Цена до СПП</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="checkbox-wrap">
+													<div class="checkbox">
+														<label class="table-constructor__field-tigger">
+															<input type="checkbox" value=""
+																class="table-constructor__field-input">
+															<span><i><i data-svg="images/svg/check.svg"></i></i></span>
+														</label>
+													</div>
+												</div>
+											</td>
+											<td class="product-info">
+												<img src="images/product-thumb.png" alt="">
+												<span>Мультитул тактический арме...</span>
+											</td>
+											<td class="article"><a href="#">777777777</a></td>
+											<td>852</td>
+											<td>45</td>
+											<td>45</td>
+											<td class="red">55</td>
+											<td class="red">22</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="checkbox">
+													<label class="table-constructor__field-tigger">
+														<input type="checkbox" value=""
+															class="table-constructor__field-input">
+														<span><i><i data-svg="images/svg/check.svg"></i></i></span>
+													</label>
+												</div>
+											</td>
+											<td class="product-info">
+												<img src="images/product-thumb.png" alt="">
+												<span>Мультитул тактический арме...</span>
+											</td>
+											<td class="article"><a href="#">777777777</a></td>
+											<td>550</td>
+											<td>45</td>
+											<td>45</td>
+											<td class="red">55</td>
+											<td class="red">22</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="checkbox">
+													<label class="table-constructor__field-tigger">
+														<input type="checkbox" value=""
+															class="table-constructor__field-input">
+														<span><i><i data-svg="images/svg/check.svg"></i></i></span>
+													</label>
+												</div>
+											</td>
+											<td class="product-info">
+												<img src="images/product-thumb.png" alt="">
+												<span>Мультитул тактический арме...</span>
+											</td>
+											<td class="article"><a href="#">777777777</a></td>
+											<td>650</td>
+											<td>45</td>
+											<td>45</td>
+											<td class="red">55</td>
+											<td class="red">22</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="checkbox">
+													<label class="table-constructor__field-tigger">
+														<input type="checkbox" value=""
+															class="table-constructor__field-input">
+														<span><i><i data-svg="images/svg/check.svg"></i></i></span>
+													</label>
+												</div>
+											</td>
+											<td class="product-info">
+												<img src="images/product-thumb.png" alt="">
+												<span>Мультитул тактический арме...</span>
+											</td>
+											<td class="article"><a href="#">777777777</a></td>
+											<td>450</td>
+											<td>45</td>
+											<td>45</td>
+											<td class="green">55</td>
+											<td class="green">22</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="checkbox">
+													<label class="table-constructor__field-tigger">
+														<input type="checkbox" value=""
+															class="table-constructor__field-input">
+														<span><i><i data-svg="images/svg/check.svg"></i></i></span>
+													</label>
+												</div>
+											</td>
+											<td class="product-info">
+												<img src="images/product-thumb.png" alt="">
+												<span>Мультитул тактический арме...</span>
+											</td>
+											<td class="article"><a href="#">777777777</a></td>
+											<td>1050</td>
+											<td>45</td>
+											<td>45</td>
+											<td class="green">55</td>
+											<td class="green">22</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="promo__active-table modify">
+							<div class="promo__active-table-inner">
+								<table>
+									<thead>
+										<tr>
+											<th style="width: 436px" colspan="2" class="grey">Текущая юнитка</th>
+											<th style="width: 650px" colspan="5" class="orange">Акция Сертификаты Wildberries от Национальной Лотереи</th>
+											<th class="orange">Блеск и сила волос на репите</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="width: 300px;" class="grey">Товар</td>
+											<td style="width: 105px;" class="grey">Артикул</td>
+											<td style="width: 185px;" class="orange">Цена для акции до СПП</td>
+											<td style="width: 111px;" class="orange">ЧП с акцией</td>
+											<td style="width: 136px;" class="orange">Рентабельность с</td>
+											<td style="width: 86px;" class="orange">Разница ЧП</td>
+											<td style="width: 133px;" class="orange">Разница рентабельности %</td>
+											<td class="orange">Цена до СПП</td>
+										</tr>
+										<tr>
+											<td class="product-info">
+												<img src="images/product-thumb.png" alt="">
+												<span>Мультитул тактический арме...</span>
+											</td>
+											<td class="article"><a href="#">777777777</a></td>
+											<td>852</td>
+											<td>45</td>
+											<td>45</td>
+											<td class="red">55</td>
+											<td class="red">22</td>
+										</tr>
+										<tr>
+											<td class="product-info">
+												<img src="images/product-thumb.png" alt="">
+												<span>Мультитул тактический арме...</span>
+											</td>
+											<td class="article"><a href="#">777777777</a></td>
+											<td>550</td>
+											<td>45</td>
+											<td>45</td>
+											<td class="red">55</td>
+											<td class="red">22</td>
+										</tr>
+										<tr>
+											<td class="product-info">
+												<img src="images/product-thumb.png" alt="">
+												<span>Мультитул тактический арме...</span>
+											</td>
+											<td class="article"><a href="#">777777777</a></td>
+											<td>650</td>
+											<td>45</td>
+											<td>45</td>
+											<td class="red">55</td>
+											<td class="red">22</td>
+										</tr>
+										<tr>
+											<td class="product-info">
+												<img src="images/product-thumb.png" alt="">
+												<span>Мультитул тактический арме...</span>
+											</td>
+											<td class="article"><a href="#">777777777</a></td>
+											<td>450</td>
+											<td>45</td>
+											<td>45</td>
+											<td class="green">55</td>
+											<td class="green">22</td>
+										</tr>
+										<tr>
+											<td class="product-info">
+												<img src="images/product-thumb.png" alt="">
+												<span>Мультитул тактический арме...</span>
+											</td>
+											<td class="article"><a href="#">777777777</a></td>
+											<td>1050</td>
+											<td>45</td>
+											<td>45</td>
+											<td class="green">55</td>
+											<td class="green">22</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</section>
+
+				</form>
+
+			</section>
+		</section>
+	</section>
+
+	<div id="modal-cabinet-delete" class="modal modal-cabinet-delete">
+		<div class="modal__content">
+			<div class="cabinet-delete">
+				<div class="cabinet-delete__icon"><img src="images/svg/alert-circle.svg" alt=""></div>
+				<div class="cabinet-delete__title">Удалить кабинет</div>
+				<div class="cabinet-delete__text">Вы уверены, что хотите удалить кабинет <strong>“Одежда и
+						украшения”</strong>? Это действие невозможно отменить.</div>
+
+				<div class="cabinet-delete__btns">
+					<a href="#" class="btn btn-sm btn-outline cabinet__control-decline">Отмена</a>
+					<a href="#" class="btn btn-sm btn-red cabinet__control-decline">Удалить</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="modal-cabinet-edit" class="modal modal-cabinet-edit">
+		<div class="modal__content">
+			<div class="cabinet__control cabinet__block">
+				<div class="cabinet__block-title">Управление Кабинетами</div>
+
+				<div class="cabinet__control-form">
+					<form>
+						<div class="form">
+							<div class="form__row">
+								<label>Изменить имя кабинета</label>
+								<input type="text" class="inputbox" placeholder="Одежда и украшения">
+							</div>
+
+							<div class="form__row">
+								<label>Изменить токен</label>
+								<input type="text" class="inputbox" placeholder="Введите новый токен ВБ">
+							</div>
+
+							<div class="form__row form__submit">
+								<a href="#" class="btn btn-sm btn-outline cabinet__control-decline">Отмена</a>
+								<input type="submit" class="btn btn-sm" value="Подтвердить">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script src="scripts/common.js"></script>
+<script src="scripts/jquery-3.7.1.min.js?ver=6jfg3256"></script>
+<script src="scripts/jquery.maskedinput.js?ver=6jfg3256"></script>
+<script src="scripts/jquery.fancybox.js?ver=6jfg3256"></script>
+<script src="scripts/masonry.pkgd.min.js?ver=6jfg3256"></script>
+<script src="scripts/swiper-bundle.min.js?ver=6jfg3256"></script>
+<script src="scripts/init.js?ver=6jfg3256"></script>
+<script src="scripts/table.js?ver=6jfg3256"></script>
+
+</html>

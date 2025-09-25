@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменение позиций столбцов</title>
+    <style>
+        ul.drag-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li.drag-item {
+            cursor: grab;
+            margin-bottom: 5px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .dragging {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tableSettings = {
+        wholesalePrice: {position: 1, isSelected: true, isFixed: false, translate: 'Оптовая<br> цена'},
+        markup: {position: 0, isSelected: true, isFixed: false, translate: 'Наценка'},
+        productDiscounts: {position: 2, isSelected: true, isFixed: false, translate: 'Скидки<br> товара'},
+        priceBeforeDiscounts: {position: 3, isSelected: true, isFixed: false, translate: 'Цена до<br> скидок'}
+    };
+    
+    // Функция обновления порядка столбцов в таблице
+    function updateTableSettings(newOrder) {
+        let newPositions = {};
+        for(let i = 0; i < newOrder.length; i++) {
+            newPositions[newOrder[i].id] = i;
+        }
+        
+        Object.keys(tableSettings).forEach(key => {
+            if(newPositions[key]) {
+                tableSettings[key].position = newPositions[key];
+            }
+        });
+    }
+
+    // Генерация списка элементов для drag-and-drop
+    const dragListContainer = document.getElementById("drag-container");
+    const sortedKeys = Object.keys(tableSettings).sort((a,b) => tableSettings[a].position - tableSettings[b].position);
+    sortedKeys.forEach(key => {
+        const item = document.createElement("li");
+        item.className = "drag-item";
+        item.setAttribute("data-id", key); // Идентификатор строки
+        item.textContent = tableSettings[key].translate.replace("<br>", "");
+        dragListContainer.appendChild(item);
+    });
+
+    // Инициализация Drag'n'Drop
+    let draggingItem = null;
+    let currentIndex = null;
+
+    dragListContainer.addEventListener("dragstart", e => {
+        draggingItem = e.target;
+        currentIndex = Array.from(dragListContainer.children).indexOf(e.target);
+        draggingItem.classList.add("dragging");
+    });
+
+    dragListContainer.addEventListener("dragover", e => {
+        e.preventDefault();
+        const target = e.target.closest(".drag-item");
+        if(target && target !== draggingItem) {
+            const nextIndex = Array.from(dragListContainer.children).indexOf(target);
+            if(currentIndex > nextIndex) {
+                dragListContainer.insertBefore(draggingItem, target);
+            } else {
+                dragListContainer.insertBefore(draggingItem, target.nextSibling);
+            }
+            currentIndex = nextIndex;
+        }
+    });
+
+    dragListContainer.addEventListener("drop", () => {
+        draggingItem.classList.remove("dragging");
+        draggingItem = null;
+        currentIndex = null;
+        // Получаем новый порядок строк
+        const newOrder = [...dragListContainer.querySelectorAll('.drag-item')].map(el => ({ id: el.dataset.id }));
+        updateTableSettings(newOrder);
+    });
+});
+</script>
+<body>
+<h1>Настройки таблицы:</h1>
+<div style="width: 300px;">
+    <ul class="drag-list" id="drag-container"></ul>
+</div>
+<p>Перетащите элементы, чтобы изменить порядок.</p>
+</body>
+</html>

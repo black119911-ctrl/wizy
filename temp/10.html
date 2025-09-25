@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: scroll; /* Горизонтальная прокрутка доступна */
+  height: 100%;
+}
+
+.container {
+  width: 200vw; /* Пример ширины больше окна браузера */
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#stickyElement {
+  position: sticky;
+  top: 0; /* Фиксация сверху */
+  left: 0; /* Не зависит от горизонтального положения */
+  z-index: 1000;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+    </style>
+    <div class="container">
+    <!-- Содержимое -->
+    <p>Здесь контент страницы...</p>
+
+    <!-- Фиксируемый элемент -->
+    <div id="stickyElement">Фиксированный элемент</div>
+</div>
+
+<script>
+    const stickyElement = document.getElementById('stickyElement');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  
+  if (window.innerWidth > stickyElement.offsetLeft + stickyElement.clientWidth) {
+    stickyElement.style.left = `${window.pageXOffset}px`;
+  } else {
+    stickyElement.style.left = '';
+  }
+  
+  stickyElement.style.top = `${scrollTop}px`;
+});
+</script>
+</body>
+</html>

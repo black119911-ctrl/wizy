@@ -1,0 +1,73 @@
+.dashboard
+    &-filters
+        &__popup
+            position: fixed
+            background: #fff
+            padding: 12px
+            border-radius: 8px
+            right: 70px
+            top: 100px
+            max-width: 528px
+            width: 100%
+            box-shadow: 0px 4px 6px -2px #0A0D1208;
+            box-shadow: 0px 12px 16px -4px #0A0D1214
+            &.hidden
+                display: none
+            &-top
+                display: flex
+                align-items: flex-start
+                &__tabs, &__options
+                    flex-basis: 50%
+                &__tabs
+                    padding-right: 8px
+                    &-item
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        padding: 10px 16px
+                        font-size: 14px
+                        line-height: 20px
+                        font-weight: 500
+                        color: #414651
+                        cursor: pointer
+                        &.active
+                            background: #F6F9FF
+                        & .selected-num
+                            font-size: 12px
+                            line-height: 1.5
+                            font-weight: 400
+                            color: #717680
+                &__options
+                    padding-left: 8px
+                    border-left: 1px solid #E9EAEB
+                    margin-bottom: 16px
+                    &-inner
+                        max-height: 325px
+                        overflow-y: auto
+                    &-list
+                        margin-top: 4px
+                        &-item
+                            padding: 10px 16px
+                            font-size: 14px
+                            line-height: 20px
+                            font-weight: 500
+                    &-search
+                        & .search
+                            & svg
+                                color: #717680
+                            & .inputbox
+                                color: #717680
+                                font-size: 14px
+                                line-height: 20px
+                                font-weight: 400
+                                height: 36px
+            &-bottom
+                display: flex
+                justify-content: flex-end
+                &-inner
+                    display: flex
+                    gap: 12px
+                    flex-basis: 50%
+                    padding-left: 24px
+                    & button
+                        width: 114px

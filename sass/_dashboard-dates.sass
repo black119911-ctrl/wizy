@@ -1,0 +1,47 @@
+.dashboard
+    &-dates
+        &__popup
+            display: flex
+            align-items: flex-start
+            position: fixed
+            right: 70px
+            top: 100px
+            background: #fff
+            border-radius: 12px
+            box-shadow: 0px 8px 8px -4px #0A0D1208
+            box-shadow: 0px 20px 24px -4px #0A0D1214
+            &.hidden
+                display: none
+            &-tabs
+                padding: 12px 16px
+                &-item
+                    padding: 8px 12px
+                    border-radius: 6px
+                    cursor: pointer
+                    font-size: 14px
+                    line-height: 20px
+                    font-weight: 500
+                    color: #414651
+                    margin-bottom: 4px
+                    &.active
+                        color: #E86821
+                        background: #FFF3EA
+            &-calendar
+                border-left: 1px solid #E9EAEB
+                &-content
+                    padding: 20px 24px
+                    border-bottom: 1px solid #E9EAEB
+                &-dates
+                    display: flex
+                    align-items: center
+                    padding: 16px 20px
+                    &-input
+                        max-width: 128px
+                        width: 100%
+                        & input
+                            font-weight: 400
+                            font-size: 14px
+                            line-height: 20px
+                            color: #1E1F2A
+                &-btns
+                    padding: 16px 24px

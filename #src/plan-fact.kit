@@ -1,0 +1,901 @@
+<!--@import "header.html"-->
+
+<section class="layout">
+	<!--@import "parts/sidebar.html"-->
+
+	<section class="content">
+		<section class="content__head">
+			<div class="content__head-left">
+				<div class="content__head-block dropdown">
+					<a href="#" class="content__head-link" data-dropdown="dropdown-trigger">
+						<span>Кабинет <strong>Одежда и украшения</strong></span>
+						<i><i data-svg="images/svg/chevron-down.svg"></i></i>
+					</a>
+
+					<div class="dropdown__block dropdown__list border" data-dropdown="dropdown-block">
+						<ul>
+							<li><a href="#">Не содержит данных</a></li>
+							<li><a href="#">Сумка через плечо</a></li>
+							<li><a href="#">Спортивные кроссовки</a></li>
+							<li><a href="#">Шарф из шерсти альпаки</a></li>
+							<li><a href="#">Часы с кожаным ремешком</a></li>
+							<li><a href="#">Шляпа с широкими полями</a></li>
+							<li><a href="#">Платье в горошек</a></li>
+							<li><a href="#">Кроссовки для бега</a></li>
+							<li><a href="#">Не содержит данных</a></li>
+							<li><a href="#">Сумка через плечо</a></li>
+							<li><a href="#">Спортивные кроссовки</a></li>
+							<li><a href="#">Шарф из шерсти альпаки</a></li>
+							<li><a href="#">Часы с кожаным ремешком</a></li>
+							<li><a href="#">Шляпа с широкими полями</a></li>
+							<li><a href="#">Платье в горошек</a></li>
+							<li><a href="#">Кроссовки для бега</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="content__head-block">
+					<a href="#" class="content__head-link">
+						<span>Добавить кабинет</span>
+						<i><i data-svg="images/svg/plus.svg"></i></i>
+					</a>
+				</div>
+			</div>
+			<div class="content__head-right">
+				<div class="content__head-block">
+					<a href="#">Осталось: 5 часов 37 минут</a>
+				</div>
+				<div class="content__head-block icon-dark">
+					<a href="#" class="content__head-link">
+						<span>Выйти</span>
+						<i><i data-svg="images/svg/exit.svg"></i></i>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="panel bg-white">
+			<form class="panel__form">
+				<div class="panel__tabs">
+					<div class="panel__tabs-titles">
+						<span class="panel__tabs-title active" data-tab="1">План-факт</span>
+						<span class="panel__tabs-title" data-tab="2">Юнитка для плана</span>
+						<span class="panel__tabs-title" data-tab="3">План продаж (шт)</span>
+					</div>
+					<div class="panel__tabs-contents">
+						<div class="panel__tabs-content active" data-tab="1">
+							<div class="panel__constructor">
+								<section class="panel__head">
+									<div class="panel__head-title">
+										<i class="tooltip"><i data-svg="images/svg/tooltip.svg"></i></i>
+										<h1>План-факт</h1>
+									</div>
+
+									<div class="panel__head-options">
+										<div class="panel__head-option">
+											<a href="plan-fact-archive.html" class="panel__head-btn">
+												<b>Архив</b>
+											</a>
+										</div>
+
+										<div class="panel__head-option panel__head-sort">
+											<div class="selectbox dropdown">
+												<div class="selectbox__field" data-dropdown="dropdown-trigger">Бренд <i data-svg="images/svg/chevron-down.svg"></i></div>
+												<div class="dropdown__block dropdown__list border" data-dropdown="dropdown-block">
+													<ul>
+														<li><a href="#">Бренд</a></li>
+														<li><a href="#">Бренд</a></li>
+														<li><a href="#">Бренд</a></li>
+														<li><a href="#">Бренд</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="panel__head-right">
+											<div class="panel__head-option panel__head-constructor">
+												<span class="panel__head-btn">
+													<i class="icon"><i data-svg="images/svg/columns.svg"></i></i>
+													<b>Столбцы</b>
+												</span>
+												<div class="dropdown__block table-constructor">
+													<div class="table-constructor__head">
+														<div class="table-constructor__label">Настройка таблицы</div>
+														<div class="selectbox dropdown">
+															<div class="selectbox__field" data-dropdown="dropdown-trigger">Шаблон подсчета <i data-svg="images/svg/chevron-down.svg"></i></div>
+															<div class="dropdown__block dropdown__list border" data-dropdown="dropdown-block">
+																<ul>
+																	<li><a href="#">Шаблон подсчета 1</a></li>
+																	<li><a href="#">Шаблон подсчета 2</a></li>
+																	<li><a href="#">Шаблон подсчета 3</a></li>
+																	<li><a href="#">Шаблон подсчета 4</a></li>
+																	<li><a href="#">Шаблон подсчета 5</a></li>
+																	<li><a href="#">Шаблон подсчета 6</a></li>
+																	<li><a href="#">Шаблон подсчета 7</a></li>
+																</ul>
+															</div>
+														</div>
+														<div class="table-constructor__close"><i data-svg="images/svg/close.svg"></i></div>
+													</div>
+													<div class="table-constructor__blocks">
+														<div class="table-constructor__block table-constructor__all">
+															<div class="table-constructor__title">Все</div>
+															<div class="table-constructor__fields">
+																<div class="table-constructor__field">
+																	<div class="checkbox">
+																		<label class="table-constructor__field-tigger">
+																			<input type="checkbox" value="" class="table-constructor__field-input">
+																			<span><i><i data-svg="images/svg/check.svg"></i></i> <b>ктр</b></span>
+																		</label>
+																	</div>
+																	<div class="table-constructor__drag"><i data-svg="images/svg/drag-indicator.svg"></i></div>
+																</div>
+															</div>
+														</div>
+
+														<div class="table-constructor__block table-constructor__fixed">
+															<div class="table-constructor__title">Фиксированные при скролле</div>
+															<div class="table-constructor__fields">
+																<div class="table-constructor__field">
+																	<div class="checkbox">
+																		<label class="table-constructor__field-tigger">
+																			<input type="checkbox" value="" class="table-constructor__field-input">
+																			<span><i><i data-svg="images/svg/check.svg"></i></i> <b>ктр</b></span>
+																		</label>
+																	</div>
+																	<div class="table-constructor__drag"><i data-svg="images/svg/drag-indicator.svg"></i></div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="table-constructor__form">
+														<input class="inputbox" type="text" placeholder="Название шаблона">
+														<input class="btn" type="submit" value="Сохранить шаблон">
+														<div class="btn btn-trs">Сбросить настройки</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel__head-option panel__head-search dropdown">
+												<span class="panel__head-btn" data-dropdown="dropdown-trigger">
+													<i class="icon"><i data-svg="images/svg/search.svg"></i></i>
+													<b>Поиск</b>
+												</span>
+
+												<div class="dropdown__block border" data-dropdown="dropdown-block">
+													<div class="form">
+														<div class="search">
+															<input type="text" class="inputbox" placeholder="Поиск">
+															<button class="search__btn"><i data-svg="images/svg/search.svg"></i></button>
+														</div>
+
+														<div class="form__head">
+															<p>Фильтры поиска для товаров</p>
+														</div>
+
+														<div class="form__filter">
+															<div class="form__filter-block">
+																<label class="form__filter-title">Бренд</label>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="brand">
+																		<span><i></i>Солярис</span>
+																	</label>
+																</div>
+															</div>
+
+															<div class="form__filter-block">
+																<label class="form__filter-title">Предмет</label>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="item">
+																		<span><i></i>Куртки</span>
+																	</label>
+																</div>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="item">
+																		<span><i></i>Майки</span>
+																	</label>
+																</div>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="item">
+																		<span><i></i>Плащи</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+
+														<div class="form__row form__btns">
+															<input type="submit" class="btn form__btn-accept" value="Подтвердить">
+															<a href="#" class="btn btn-outline form__btn-clear">Сбросить</a>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel__head-option panel__head-refresh">
+												<span class="panel__head-btn">
+													<i class="icon"><i data-svg="images/svg/refresh.svg"></i></i>
+												</span>
+											</div>
+										</div>
+									</div>
+								</section>
+
+								<section class="table table-constructed table-sticked">
+									<div class="table__head">
+										<span class="table__head-cell table__image" style="width: 60px;"><b>фото</b></span>
+
+										<span class="table__head-cell table__article" style="width: 100px;"><b>Артикул</b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 100px;"><b>Оптовая<br> цена <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 110px;"><b>Наценка <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b><sup>%</sup></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 100px;"><b>Скидки<br> товара <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b><sup>%</sup></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 100px;"><b>Цена до<br> скидок <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__progress clickable" style="width: 160px;"><b>Прогноз выполнения плана в выкупах <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 130px;"><b>Прогноз Отклонения В заказах <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 110px;"><b>Прогноз выкупов<i class="icon"> <i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 70px;"><b>КТР <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__progress clickable" style="width: 160px;"><b>Прогноз выполнения плана в заказах <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 130px;"><b>Прогноз отклонения в выкупах <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 110px;"><b>Хранение <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b><sup>За 45 дней</sup></span>
+									</div>
+
+									<div class="table__body">
+										<div class="table__row table__row_main">
+											<div class="table__cell table__image" style="width: 60px;"></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>Итого</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>5678</span></div>
+											<div class="table__cell table__text" style="width: 110px;"><span>2</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>9</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>9102</span></div>
+											<div class="table__cell table__progress" style="width: 160px;">
+												<div class="table__progress-line bad"><i style="width: 30%;"></i></div>
+												<div class="table__progress-count">30%</div>
+											</div>
+											<div class="table__cell table__text good" style="width: 130px;"><span>42</span></div>
+											<div class="table__cell table__text" style="width: 110px;"><span>6786</span></div>
+											<div class="table__cell table__text" style="width: 70px;"><span>0.5</span></div>
+											<div class="table__cell table__progress" style="width: 160px;">
+												<div class="table__progress-line bad"><i style="width: 20%;"></i></div>
+												<div class="table__progress-count">20%</div>
+											</div>
+											<div class="table__cell table__text bad" style="width: 130px;"><span>-45</span></div>
+											<div class="table__cell table__text" style="width: 110px;"><span>2.0</span></div>
+										</div>
+
+										<div class="table__row">
+											<div class="table__cell table__image" style="width: 60px;">
+												<span><img src="images/product-thumb.png" alt=""></span>
+												<i><img src="images/product.png" alt=""></i>
+											</div>
+											<div class="table__cell table__article hover" style="width: 100px;"><a href="#" class="table__cell-link">777777777</a></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>2346</span></div>
+											<div class="table__cell table__text" style="width: 110px;"><span>8</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>8</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>6780</span></div>
+											<div class="table__cell table__progress" style="width: 160px;">
+												<div class="table__progress-line"><i style="width: 102%;"></i></div>
+												<div class="table__progress-count">102%</div>
+											</div>
+											<div class="table__cell table__text bad" style="width: 130px;"><span>-10</span></div>
+											<div class="table__cell table__text" style="width: 110px;"><span>7892</span></div>
+											<div class="table__cell table__text" style="width: 70px;"><span><strong>1.5</strong></span></div>
+											<div class="table__cell table__progress" style="width: 160px;">
+												<div class="table__progress-line poor"><i style="width: 60%;"></i></div>
+												<div class="table__progress-count">60%</div>
+											</div>
+											<div class="table__cell table__text good" style="width: 130px;"><span>24</span></div>
+											<div class="table__cell table__text" style="width: 110px;"><span>1.5</span></div>
+										</div>
+
+										<div class="table__row">
+											<div class="table__cell table__image" style="width: 60px;">
+												<span><img src="images/product-thumb.png" alt=""></span>
+												<i><img src="images/product.png" alt=""></i>
+											</div>
+											<div class="table__cell table__article hover" style="width: 100px;"><a href="#" class="table__cell-link">777777777</a></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>8905</span></div>
+											<div class="table__cell table__text" style="width: 110px;"><span>10</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>10</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>4567</span></div>
+											<div class="table__cell table__progress" style="width: 160px;">
+												<div class="table__progress-line bad"><i style="width: 10%;"></i></div>
+												<div class="table__progress-count">10%</div>
+											</div>
+											<div class="table__cell table__text bad" style="width: 130px;"><span>-15</span></div>
+											<div class="table__cell table__text" style="width: 110px;"><span>3400</span></div>
+											<div class="table__cell table__text" style="width: 70px;"><span><strong>1.0</strong></span></div>
+											<div class="table__cell table__progress" style="width: 160px;">
+												<div class="table__progress-line poor"><i style="width: 40%;"></i></div>
+												<div class="table__progress-count">40%</div>
+											</div>
+											<div class="table__cell table__text bad" style="width: 130px;"><span>-45</span></div>
+											<div class="table__cell table__text" style="width: 110px;"><span>3.0</span></div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+
+						<div class="panel__tabs-content" data-tab="2">
+							<div class="panel__constructor">
+								<section class="panel__head">
+									<div class="panel__head-title">
+										<i class="tooltip"><i data-svg="images/svg/tooltip.svg"></i></i>
+										<h1>План-факт</h1>
+									</div>
+
+									<div class="panel__head-options">
+										<div class="panel__head-option panel__head-file dropdown">
+											<span class="panel__head-btn" data-dropdown="dropdown-trigger">
+												<i class="icon"><i data-svg="images/svg/file-add.svg"></i></i>
+												<b>Загрузить Excel</b>
+												<i class="icon icon-green"><i data-svg="images/svg/check.svg"></i></i>
+											</span>
+
+											<div class="dropdown__block" data-dropdown="dropdown-block">
+												<div class="form">
+													<div class="form__row">
+														<label class="file btn btn-blue btn-shadow">
+															<input type="file" id="file">
+															<b>Загрузить Excel</b>
+															<i class="icon fill"><i data-svg="images/svg/download.svg"></i></i>
+														</label>
+													</div>
+
+													<div class="form__row">
+														<a href="#" class="btn btn-outline" target="_blank">Скачать шаблон Excel</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="panel__head-right">
+											<div class="panel__head-option panel__head-constructor">
+												<span class="panel__head-btn">
+													<i class="icon"><i data-svg="images/svg/columns.svg"></i></i>
+													<b>Столбцы</b>
+												</span>
+												<div class="dropdown__block table-constructor">
+													<div class="table-constructor__head">
+														<div class="table-constructor__label">Настройка таблицы</div>
+														<div class="selectbox dropdown">
+															<div class="selectbox__field" data-dropdown="dropdown-trigger">Шаблон подсчета <i data-svg="images/svg/chevron-down.svg"></i></div>
+															<div class="dropdown__block dropdown__list border" data-dropdown="dropdown-block">
+																<ul>
+																	<li><a href="#">Шаблон подсчета 1</a></li>
+																	<li><a href="#">Шаблон подсчета 2</a></li>
+																	<li><a href="#">Шаблон подсчета 3</a></li>
+																	<li><a href="#">Шаблон подсчета 4</a></li>
+																	<li><a href="#">Шаблон подсчета 5</a></li>
+																	<li><a href="#">Шаблон подсчета 6</a></li>
+																	<li><a href="#">Шаблон подсчета 7</a></li>
+																</ul>
+															</div>
+														</div>
+														<div class="table-constructor__close"><i data-svg="images/svg/close.svg"></i></div>
+													</div>
+													<div class="table-constructor__blocks">
+														<div class="table-constructor__block table-constructor__all">
+															<div class="table-constructor__title">Все</div>
+															<div class="table-constructor__fields">
+																<div class="table-constructor__field">
+																	<div class="checkbox">
+																		<label class="table-constructor__field-tigger">
+																			<input type="checkbox" value="" class="table-constructor__field-input">
+																			<span><i><i data-svg="images/svg/check.svg"></i></i> <b>ктр</b></span>
+																		</label>
+																	</div>
+																	<div class="table-constructor__drag"><i data-svg="images/svg/drag-indicator.svg"></i></div>
+																</div>
+															</div>
+														</div>
+
+														<div class="table-constructor__block table-constructor__fixed">
+															<div class="table-constructor__title">Фиксированные при скролле</div>
+															<div class="table-constructor__fields">
+																<div class="table-constructor__field">
+																	<div class="checkbox">
+																		<label class="table-constructor__field-tigger">
+																			<input type="checkbox" value="" class="table-constructor__field-input">
+																			<span><i><i data-svg="images/svg/check.svg"></i></i> <b>ктр</b></span>
+																		</label>
+																	</div>
+																	<div class="table-constructor__drag"><i data-svg="images/svg/drag-indicator.svg"></i></div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="table-constructor__form">
+														<input class="inputbox" type="text" placeholder="Название шаблона">
+														<input class="btn" type="submit" value="Сохранить шаблон">
+														<div class="btn btn-trs">Сбросить настройки</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel__head-option panel__head-insert dropdown">
+												<span class="panel__head-btn" data-dropdown="dropdown-trigger">
+													<i class="icon"><i data-svg="images/svg/view-table.svg"></i></i>
+													<b>Вставить значения</b>
+												</span>
+
+												<div class="dropdown__block border" data-dropdown="dropdown-block">
+													<div class="form">
+														<div class="form__head">
+															<p>Выберите столбцы чьи значения вы хотите изменить</p>
+														</div>
+
+														<div class="form__row form__flex">
+															<label>Налог</label>
+															<input type="text" class="inputbox" placeholder="Введите значения">
+														</div>
+
+														<div class="form__row form__flex">
+															<label>Упаковка</label>
+															<input type="text" class="inputbox" placeholder="Введите значения">
+														</div>
+
+														<div class="form__row form__btns">
+															<input type="submit" class="btn form__btn-accept" value="Подтвердить">
+															<a href="#" class="btn btn-outline form__btn-clear">Сбросить</a>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel__head-option panel__head-search dropdown">
+												<span class="panel__head-btn" data-dropdown="dropdown-trigger">
+													<i class="icon"><i data-svg="images/svg/search.svg"></i></i>
+													<b>Поиск</b>
+												</span>
+
+												<div class="dropdown__block border" data-dropdown="dropdown-block">
+													<div class="form">
+														<div class="search">
+															<input type="text" class="inputbox" placeholder="Поиск">
+															<button class="search__btn"><i data-svg="images/svg/search.svg"></i></button>
+														</div>
+
+														<div class="form__head">
+															<p>Фильтры поиска для товаров</p>
+														</div>
+
+														<div class="form__filter">
+															<div class="form__filter-block">
+																<label class="form__filter-title">Бренд</label>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="brand">
+																		<span><i></i>Солярис</span>
+																	</label>
+																</div>
+															</div>
+
+															<div class="form__filter-block">
+																<label class="form__filter-title">Предмет</label>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="item">
+																		<span><i></i>Куртки</span>
+																	</label>
+																</div>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="item">
+																		<span><i></i>Майки</span>
+																	</label>
+																</div>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="item">
+																		<span><i></i>Плащи</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+
+														<div class="form__row form__btns">
+															<input type="submit" class="btn form__btn-accept" value="Подтвердить">
+															<a href="#" class="btn btn-outline form__btn-clear">Сбросить</a>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel__head-option panel__head-refresh">
+												<span class="panel__head-btn">
+													<i class="icon"><i data-svg="images/svg/refresh.svg"></i></i>
+												</span>
+											</div>
+										</div>
+									</div>
+								</section>
+
+								<section class="table table-constructed table-sticked">
+									<div class="table__head">
+										<span class="table__head-cell table__image" style="width: 60px;"><b>фото</b></span>
+
+										<span class="table__head-cell table__article" style="width: 100px;"><b>Артикул</b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 160px;"><b>Оптовая цена <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 110px;"><b>Наценка <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 100px;"><b>Скидки<br> товара <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 100px;"><b>Цена до<br> скидок <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 130px;"><b>Цена<br> покупателя <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 100px;"><b>Чистая цена вб <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__input clickable" style="width: 176px;"><b>ДДР Желаемый <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b><sup>%</sup></span>
+
+										<span class="table__head-cell table__input table__right-fixed clickable" style="width: 120px;"><b>Ros<br> Желаемый <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b><sup>%</sup></span>
+									</div>
+
+									<div class="table__body">
+										<div class="table__row">
+											<div class="table__cell table__image" style="width: 60px;">
+												<span><img src="images/product-thumb.png" alt=""></span>
+												<i><img src="images/product.png" alt=""></i>
+											</div>
+											<div class="table__cell table__article hover" style="width: 100px;"><a href="#" class="table__cell-link">777777777</a></div>
+											<div class="table__cell table__text" style="width: 160px;"><span>124 555</span></div>
+											<div class="table__cell table__text" style="width: 110px;"><span>23</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>23</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>23</span></div>
+											<div class="table__cell table__text" style="width: 130px;"><span>321</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>32</span></div>
+											<div class="table__cell table__input hover" style="width: 176px;"><input type="number" class="inputbox" placeholder="Введите значение"></div>
+											<div class="table__cell table__input hover table__right-fixed" style="width: 120px;"><input type="number" class="inputbox" placeholder="Введите значение"></div>
+										</div>
+										<div class="table__row">
+											<div class="table__cell table__image" style="width: 60px;">
+												<span><img src="images/product-thumb.png" alt=""></span>
+												<i><img src="images/product.png" alt=""></i>
+											</div>
+											<div class="table__cell table__article hover" style="width: 100px;"><a href="#" class="table__cell-link">777777777</a></div>
+											<div class="table__cell table__text" style="width: 160px;"><span>124 555</span></div>
+											<div class="table__cell table__text" style="width: 110px;"><span>25</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>23</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>6780</span></div>
+											<div class="table__cell table__text" style="width: 130px;"><span>3457</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>1245</span></div>
+											<div class="table__cell table__input hover" style="width: 176px;"><input type="number" class="inputbox" placeholder="Введите значение"></div>
+											<div class="table__cell table__input hover table__right-fixed" style="width: 120px;"><input type="number" class="inputbox" placeholder="Введите значение"></div>
+										</div>
+										<div class="table__row">
+											<div class="table__cell table__image" style="width: 60px;">
+												<span><img src="images/product-thumb.png" alt=""></span>
+												<i><img src="images/product.png" alt=""></i>
+											</div>
+											<div class="table__cell table__article hover" style="width: 100px;"><a href="#" class="table__cell-link">777777777</a></div>
+											<div class="table__cell table__text" style="width: 160px;"><span>124 555</span></div>
+											<div class="table__cell table__text" style="width: 110px;"><span>25</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>23</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>4567</span></div>
+											<div class="table__cell table__text" style="width: 130px;"><span>1238</span></div>
+											<div class="table__cell table__text" style="width: 100px;"><span>3400</span></div>
+											<div class="table__cell table__input hover" style="width: 176px;"><input type="number" class="inputbox" placeholder="Введите значение"></div>
+											<div class="table__cell table__input hover table__right-fixed" style="width: 120px;"><input type="number" class="inputbox" placeholder="Введите значение"></div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+
+						<div class="panel__tabs-content" data-tab="3">
+							<div class="panel__constructor">
+								<section class="panel__head">
+									<div class="panel__head-title">
+										<i class="tooltip"><i data-svg="images/svg/tooltip.svg"></i></i>
+										<h1>План-факт</h1>
+									</div>
+
+									<div class="panel__head-options">
+										<div class="panel__head-option panel__head-file dropdown">
+											<span class="panel__head-btn" data-dropdown="dropdown-trigger">
+												<i class="icon"><i data-svg="images/svg/file-add.svg"></i></i>
+												<b>Загрузить Excel</b>
+												<i class="icon icon-green"><i data-svg="images/svg/check.svg"></i></i>
+											</span>
+
+											<div class="dropdown__block" data-dropdown="dropdown-block">
+												<div class="form">
+													<div class="form__row">
+														<label class="file btn btn-blue btn-shadow">
+															<input type="file" id="file">
+															<b>Загрузить Excel</b>
+															<i class="icon fill"><i data-svg="images/svg/download.svg"></i></i>
+														</label>
+													</div>
+
+													<div class="form__row">
+														<a href="#" class="btn btn-outline" target="_blank">Скачать шаблон Excel</a>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel__head-right">
+											<div class="panel__head-option panel__head-insert dropdown">
+												<span class="panel__head-btn" data-dropdown="dropdown-trigger">
+													<i class="icon"><i data-svg="images/svg/view-table.svg"></i></i>
+													<b>Вставить значения</b>
+												</span>
+
+												<div class="dropdown__block border" data-dropdown="dropdown-block">
+													<div class="form">
+														<div class="form__head">
+															<p>Выберите столбцы чьи значения вы хотите изменить</p>
+														</div>
+
+														<div class="form__row form__flex">
+															<label>Налог</label>
+															<input type="text" class="inputbox" placeholder="Введите значения">
+														</div>
+
+														<div class="form__row form__flex">
+															<label>Упаковка</label>
+															<input type="text" class="inputbox" placeholder="Введите значения">
+														</div>
+
+														<div class="form__row form__btns">
+															<input type="submit" class="btn form__btn-accept" value="Подтвердить">
+															<a href="#" class="btn btn-outline form__btn-clear">Сбросить</a>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel__head-option panel__head-search dropdown">
+												<span class="panel__head-btn" data-dropdown="dropdown-trigger">
+													<i class="icon"><i data-svg="images/svg/search.svg"></i></i>
+													<b>Поиск</b>
+												</span>
+
+												<div class="dropdown__block border" data-dropdown="dropdown-block">
+													<div class="form">
+														<div class="search">
+															<input type="text" class="inputbox" placeholder="Поиск">
+															<button class="search__btn"><i data-svg="images/svg/search.svg"></i></button>
+														</div>
+
+														<div class="form__head">
+															<p>Фильтры поиска для товаров</p>
+														</div>
+
+														<div class="form__filter">
+															<div class="form__filter-block">
+																<label class="form__filter-title">Бренд</label>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="brand">
+																		<span><i></i>Солярис</span>
+																	</label>
+																</div>
+															</div>
+
+															<div class="form__filter-block">
+																<label class="form__filter-title">Предмет</label>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="item">
+																		<span><i></i>Куртки</span>
+																	</label>
+																</div>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="item">
+																		<span><i></i>Майки</span>
+																	</label>
+																</div>
+																<div class="checkbox">
+																	<label>
+																		<input type="checkbox" name="item">
+																		<span><i></i>Плащи</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+
+														<div class="form__row form__btns">
+															<input type="submit" class="btn form__btn-accept" value="Подтвердить">
+															<a href="#" class="btn btn-outline form__btn-clear">Сбросить</a>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel__head-option panel__head-refresh">
+												<span class="panel__head-btn">
+													<i class="icon"><i data-svg="images/svg/refresh.svg"></i></i>
+												</span>
+											</div>
+										</div>
+									</div>
+								</section>
+
+								<section class="table table-sticked">
+									<div class="table__head">
+										<span class="table__head-cell table__image" style="width: 60px;"><b>фото</b></span>
+
+										<span class="table__head-cell table__article" style="width: 100px;"><b>Артикул</b></span>
+
+										<span class="table__head-cell table__article clickable" style="width: 180px;"><b>Артикул продавца <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 160px;"><b>План продаж <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b><sup>шт</sup></span>
+
+										<span class="table__head-cell table__text clickable" style="width: 220px;"><b>Срок производства <i class="icon"><i data-svg="images/svg/sort.svg"></i></i></b><sup>дней</sup></span>
+									</div>
+
+									<div class="table__body">
+										<div class="table__row">
+											<div class="table__cell table__image" style="width: 60px;">
+												<span><img src="images/product-thumb.png" alt=""></span>
+												<i><img src="images/product.png" alt=""></i>
+											</div>
+											<div class="table__cell table__article hover" style="width: 100px;"><a href="#" class="table__cell-link">777777777</a></div>
+											<div class="table__cell table__article hover" style="width: 180px;" style="width: 180px;"><a href="#" class="table__cell-link">art_prod1256</a></div>
+											<div class="table__cell table__input hover" style="width: 160px;"><input type="number" class="inputbox" placeholder="Введите значение"></div>
+											<div class="table__cell table__input hover" style="width: 220px;"><input type="number" class="inputbox disabled" value="32"></div>
+										</div>
+
+										<div class="table__row">
+											<div class="table__cell table__image" style="width: 60px;">
+												<span><img src="images/product-thumb.png" alt=""></span>
+												<i><img src="images/product.png" alt=""></i>
+											</div>
+											<div class="table__cell table__article hover" style="width: 100px;"><a href="#" class="table__cell-link">777777777</a></div>
+											<div class="table__cell table__article hover" style="width: 180px;" style="width: 180px;"><a href="#" class="table__cell-link">art_prod1256</a></div>
+											<div class="table__cell table__input hover" style="width: 160px;"><input type="number" class="inputbox disabled" value="32"></div>
+											<div class="table__cell table__input hover" style="width: 220px;"><input type="number" class="inputbox" placeholder="Введите значение"></div>
+										</div>
+
+										<div class="table__row">
+											<div class="table__cell table__image" style="width: 60px;">
+												<span><img src="images/product-thumb.png" alt=""></span>
+												<i><img src="images/product.png" alt=""></i>
+											</div>
+											<div class="table__cell table__article hover" style="width: 100px;"><a href="#" class="table__cell-link">777777777</a></div>
+											<div class="table__cell table__article hover" style="width: 180px;" style="width: 180px;"><a href="#" class="table__cell-link">art_prod1256</a></div>
+											<div class="table__cell table__input hover" style="width: 160px;"><input type="number" class="inputbox" placeholder="Введите значение"></div>
+											<div class="table__cell table__input hover" style="width: 220px;"><input type="number" class="inputbox" placeholder="Введите значение"></div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<section class="panel__control">
+				<div class="panel__sort">
+					<div class="panel__sort-item">
+						<label>Строк</label>
+						<div class="selectbox dropdown">
+							<div class="selectbox__field" data-dropdown="dropdown-trigger">8 <i data-svg="images/svg/chevron-down.svg"></i></div>
+							<div class="dropdown__block dropdown__list border bottom" data-dropdown="dropdown-block">
+								<ul>
+									<li><a href="#">16</a></li>
+									<li><a href="#">15</a></li>
+									<li><a href="#">14</a></li>
+									<li><a href="#">13</a></li>
+									<li><a href="#">12</a></li>
+									<li><a href="#">11</a></li>
+									<li><a href="#">10</a></li>
+									<li><a href="#">9</a></li>
+									<li><a href="#">8</a></li>
+									<li><a href="#">7</a></li>
+									<li><a href="#">6</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">1</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="selectbox dropdown">
+							<div class="selectbox__field" data-dropdown="dropdown-trigger">Шаблон подсчета <i data-svg="images/svg/chevron-down.svg"></i></div>
+							<div class="dropdown__block dropdown__list border bottom" data-dropdown="dropdown-block">
+								<ul>
+									<li><a href="#">Шаблон подсчета 1</a></li>
+									<li><a href="#">Шаблон подсчета 2</a></li>
+									<li><a href="#">Шаблон подсчета 3</a></li>
+									<li><a href="#">Шаблон подсчета 4</a></li>
+									<li><a href="#">Шаблон подсчета 5</a></li>
+									<li><a href="#">Шаблон подсчета 6</a></li>
+									<li><a href="#">Шаблон подсчета 7</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel__nav">
+					<div class="panel__nav-arrows">
+						<a href="#" class="panel__nav-arrow panel__nav-left">
+							<i data-svg="images/svg/chevron-left.svg"></i>
+						</a>
+						<a href="#" class="panel__nav-arrow panel__nav-right">
+							<i data-svg="images/svg/chevron-right.svg"></i>
+						</a>
+					</div>
+
+					<div class="panel__nav-pages">
+						<a href="#">1</a>
+						<a href="#" class="active">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">6</a>
+						<a href="#">7</a>
+					</div>
+				</div>
+			</section>
+		</section>
+	</section>
+</section>
+
+<div id="modal-cabinet-delete" class="modal modal-cabinet-delete">
+	<div class="modal__content">
+		<div class="cabinet-delete">
+			<div class="cabinet-delete__icon"><img src="images/svg/alert-circle.svg" alt=""></div>
+			<div class="cabinet-delete__title">Удалить кабинет</div>
+			<div class="cabinet-delete__text">Вы уверены, что хотите удалить кабинет <strong>“Одежда и украшения”</strong>? Это действие невозможно отменить.</div>
+
+			<div class="cabinet-delete__btns">
+				<a href="#" class="btn btn-sm btn-outline cabinet__control-decline">Отмена</a>
+				<a href="#" class="btn btn-sm btn-red cabinet__control-decline">Удалить</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="modal-cabinet-edit" class="modal modal-cabinet-edit">
+	<div class="modal__content">
+		<div class="cabinet__control cabinet__block">
+			<div class="cabinet__block-title">Управление Кабинетами</div>
+
+			<div class="cabinet__control-form">
+				<form>
+					<div class="form">
+						<div class="form__row">
+							<label>Изменить имя кабинета</label>
+							<input type="text" class="inputbox" placeholder="Одежда и украшения">
+						</div>
+
+						<div class="form__row">
+							<label>Изменить токен</label>
+							<input type="text" class="inputbox" placeholder="Введите новый токен ВБ">
+						</div>
+
+						<div class="form__row form__submit">
+							<a href="#" class="btn btn-sm btn-outline cabinet__control-decline">Отмена</a>
+							<input type="submit" class="btn btn-sm" value="Подтвердить">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--@import "footer.html"-->

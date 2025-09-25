@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/fonts.css?ver=6jfg3256" type="text/css" />
+    <link rel="stylesheet" href="styles/jquery.fancybox.css?ver=6jfg3256" type="text/css" />
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css?ver=6jfg3256" type="text/css" />
+    <link rel="stylesheet" href="styles/style.css?ver=6jfg3256" type="text/css" />
+    <link rel="stylesheet" href="styles/responsive.css?ver=6jfg3256" type="text/css" />
+    <link rel="stylesheet" href="sass/wizy.css">
+
+</head>
+
+<body>
+    <div class="wizy-overlay hidden"></div>
+    <div class="complete-test__popup-overlay hidden"></div>
+    <section class="layout">
+        <aside class="sidebar">
+            <div class="sidebar__inner">
+                <div class="sidebar__head">
+                    <div class="sidebar__logo"><img src="images/svg/logo-grey.svg" alt=""></div>
+                    <div class="sidebar__btn"><i data-svg="images/svg/sidebar.svg"></i></div>
+                </div>
+
+                <div class="sidebar__menu">
+                    <div class="sidebar__menu-item">
+                        <a href="dashboard.html">
+                            <i><i data-svg="images/svg/sidebar/dashboard.svg"></i></i>
+                            <span>Дашборд</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__menu-item">
+                        <a href="products.html">
+                            <i><i data-svg="images/svg/sidebar/product.svg"></i></i>
+                            <span>Товары</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__menu-item active">
+                        <a href="tests.html">
+                            <i><i data-svg="images/svg/sidebar/ab-test.svg"></i></i>
+                            <span>А/B Тесты</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__menu-item">
+                        <a href="unit-econom.html">
+                            <i><i data-svg="images/svg/sidebar/unit-eco.svg"></i></i>
+                            <span>ЮНИТ-экономика</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__menu-item">
+                        <a href="plan-fact.html">
+                            <i><i data-svg="images/svg/sidebar/plan.svg"></i></i>
+                            <span>План-факт</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__menu-item">
+                        <a href="marketing.html">
+                            <i><i data-svg="images/svg/sidebar/marketng.svg"></i></i>
+                            <span>Маркетинг</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__menu-item">
+                        <a href="promo.html">
+                            <i><i data-svg="images/svg/sidebar/promot.svg"></i></i>
+                            <span>Акции</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__menu-item">
+                        <a href="sklad-podsort.html">
+                            <i><i data-svg="images/svg/sidebar/house.svg"></i></i>
+                            <span>Склады и Подсорт</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__menu-item">
+                        <a href="financial.html">
+                            <i><i data-svg="images/svg/sidebar/report.svg"></i></i>
+                            <span>Фин. отчеты</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="content">
+            <section class="content__head">
+                <div class="content__head-left">
+                    <div class="content__head-block dropdown">
+                        <a href="#" class="content__head-link" data-dropdown="dropdown-trigger">
+                            <!-- <span>Кабинет <strong>Одежда и украшения</strong></span> -->
+                            <span>Кабинет <strong></strong></span>
+                            <i><i data-svg="images/svg/chevron-down.svg"></i></i>
+                        </a>
+
+                        <div class="dropdown__block dropdown__list border" id="cabinets-dropdown-list" data-dropdown="dropdown-block">
+                            <ul>
+                                <!-- <li><a href="#">Не содержит данных</a></li>
+                                <li><a href="#">Сумка через плечо</a></li>
+                                <li><a href="#">Спортивные кроссовки</a></li>
+                                <li><a href="#">Шарф из шерсти альпаки</a></li>
+                                <li><a href="#">Часы с кожаным ремешком</a></li>
+                                <li><a href="#">Шляпа с широкими полями</a></li>
+                                <li><a href="#">Платье в горошек</a></li>
+                                <li><a href="#">Кроссовки для бега</a></li>
+                                <li><a href="#">Не содержит данных</a></li>
+                                <li><a href="#">Сумка через плечо</a></li>
+                                <li><a href="#">Спортивные кроссовки</a></li>
+                                <li><a href="#">Шарф из шерсти альпаки</a></li>
+                                <li><a href="#">Часы с кожаным ремешком</a></li>
+                                <li><a href="#">Шляпа с широкими полями</a></li>
+                                <li><a href="#">Платье в горошек</a></li>
+                                <li><a href="#">Кроссовки для бега</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content__head-block">
+                        <a href="cabinet.html" class="content__head-link">
+                            <span>Добавить кабинет</span>
+                            <i><i data-svg="images/svg/plus.svg"></i></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="content__head-right">
+                    <div class="content__head-block">
+                        <a href="#">Осталось: 5 часов 37 минут</a>
+                    </div>
+                    <div class="content__head-block icon-dark">
+                        <a href="#" class="content__head-link">
+                            <span>Выйти</span>
+                            <i><i data-svg="images/svg/exit.svg"></i></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel bg-white">
+                <form class="panel__form">
+                    <section class="panel__head">
+                        <div class="panel__head-title">
+                            <i class="tooltip"><i data-svg="images/svg/tooltip.svg"></i></i>
+                            <h1>А/В Тесты</h1>
+                        </div>
+
+                        <div class="panel__head-options">
+                            <div class="panel__head-option">
+                                <a href="tests-create.html" class="wizy-btn">Создать тест</a>
+                            </div>
+
+                            <div class="panel__head-right">
+                                <div class="panel__head-option panel__head-search dropdown">
+                                    <span class="panel__head-btn" data-dropdown="dropdown-trigger">
+                                        <i class="icon"><i data-svg="images/svg/search.svg"></i></i>
+                                        <b>Поиск</b>
+                                    </span>
+
+                                    <div class="dropdown__block border" data-dropdown="dropdown-block">
+                                        <div class="form">
+                                            <div class="search">
+                                                <input type="text" class="inputbox" placeholder="Поиск">
+                                                <button class="search__btn"><i
+                                                        data-svg="images/svg/search.svg"></i></button>
+                                            </div>
+
+                                            <div class="form__head">
+                                                <p>Фильтры поиска для товаров</p>
+                                            </div>
+
+                                            <div class="form__filter">
+                                                <div class="form__filter-block">
+                                                    <label class="form__filter-title">Бренд</label>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="brand">
+                                                            <span><i></i>Солярис</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form__filter-block">
+                                                    <label class="form__filter-title">Предмет</label>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="item">
+                                                            <span><i></i>Куртки</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="item">
+                                                            <span><i></i>Майки</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="item">
+                                                            <span><i></i>Плащи</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form__row form__btns">
+                                                <input type="submit" class="btn form__btn-accept" value="Подтвердить">
+                                                <a href="#" class="btn btn-outline form__btn-clear">Сбросить</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel__head-option panel__head-refresh">
+                                    <span class="panel__head-btn">
+                                        <i class="icon"><i data-svg="images/svg/refresh.svg"></i></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="tests">
+                        <div class="tests__tabs">
+                            <div class="tests__tabs-item active">Все</div>
+                            <div class="tests__tabs-item">Черновики</div>
+                            <div class="tests__tabs-item">В процессе</div>
+                            <div class="tests__tabs-item">Завершены</div>
+                            <div class="tests__tabs-item">Ошибка</div>
+                            <div class="tests__tabs-item">Архив</div>
+                        </div>
+                        <div class="tests__tables">
+                            <div class="tests__tables-item">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Название теста</th>
+                                            <th>Артикул</th>
+                                            <th>Артикул продавца</th>
+                                            <th>Рекламная кампания</th>
+                                            <th>Бренд</th>
+                                            <th class="status">
+                                                <span>Статус</span>
+                                                <i class="status-arrow" data-svg="images/svg/arrow-down.svg"></i>
+                                            </th>
+                                            <th>Дата начала</th>
+                                            <th>Дата завершения</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a data-test="1" href="#">Тест 01</a></td>
+                                            <td><a href="#">777777777</a></td>
+                                            <td><a href="#">777777777</a></td>
+                                            <td>Кампания сбережения средств</td>
+                                            <td>Бренд Лореляль Париж</td>
+                                            <td class="archive">
+                                                <span>Архив</span>
+                                            </td>
+                                            <td>12.03.2025</td>
+                                            <td>12.03.2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a data-test="2" href="#">Тест 02</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td>Кампания сбережения средств</td>
+                                            <td>Бренд Лореляль Париж</td>
+                                            <td class="error">
+                                                <span>Ошибка</span>
+                                            </td>
+                                            <td>12.03.2025</td>
+                                            <td>12.03.2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a data-test="3" href="#">Тест 03</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td>Кампания сбережения средств</td>
+                                            <td>Бренд Лореляль Париж</td>
+                                            <td class="complete">
+                                                <span>Завершено</span>
+                                            </td>
+                                            <td>12.03.2025</td>
+                                            <td>12.03.2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a data-test="4" href="#">Тест 04</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td>Кампания сбережения средств</td>
+                                            <td>Бренд Лореляль Париж</td>
+                                            <td class="error">
+                                                <span>Ошибка</span>
+                                            </td>
+                                            <td>12.03.2025</td>
+                                            <td>12.03.2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a data-test="5" href="#">Тест 05</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td>Кампания сбережения средств</td>
+                                            <td>Бренд Лореляль Париж</td>
+                                            <td class="complete">
+                                                <span>Завершено</span>
+                                            </td>
+                                            <td>12.03.2025</td>
+                                            <td>12.03.2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a data-test="6" href="#">Тест 06</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td>Кампания сбережения средств</td>
+                                            <td>Бренд Лореляль Париж</td>
+                                            <td class="complete">
+                                                <span>Завершено</span>
+                                            </td>
+                                            <td>12.03.2025</td>
+                                            <td>12.03.2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a data-test="7" href="#">Тест 07</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td>Кампания сбережения средств</td>
+                                            <td>Бренд Лореляль Париж</td>
+                                            <td class="in-progress">
+                                                <span>В процессе</span>
+                                            </td>
+                                            <td>12.03.2025</td>
+                                            <td>12.03.2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a data-test="8" href="#">Тест 08</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td><a href="#">161412601</a></td>
+                                            <td>Кампания сбережения средств</td>
+                                            <td>Бренд Лореляль Париж</td>
+                                            <td class="error">
+                                                <span>Ошибка</span>
+                                            </td>
+                                            <td>12.03.2025</td>
+                                            <td>12.03.2025</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="panel__control">
+                        <div class="panel__sort">
+                            <div class="panel__sort-item">
+                                <label>Строк</label>
+                                <div class="selectbox dropdown">
+                                    <div class="selectbox__field" data-dropdown="dropdown-trigger">
+                                        8 <i data-svg="images/svg/chevron-down.svg"></i>
+                                    </div>
+                                    <div class="dropdown__block dropdown__list border bottom"
+                                        data-dropdown="dropdown-block">
+                                        <ul>
+                                            <li><a href="#">16</a></li>
+                                            <li><a href="#">15</a></li>
+                                            <li><a href="#">14</a></li>
+                                            <li><a href="#">13</a></li>
+                                            <li><a href="#">12</a></li>
+                                            <li><a href="#">11</a></li>
+                                            <li><a href="#">10</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">7</a></li>
+                                            <li><a href="#">6</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">1</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel__nav">
+                            <div class="panel__nav-arrows">
+                                <a href="#" class="panel__nav-arrow panel__nav-left">
+                                    <i data-svg="images/svg/chevron-left.svg"></i>
+                                </a>
+                                <a href="#" class="panel__nav-arrow panel__nav-right">
+                                    <i data-svg="images/svg/chevron-right.svg"></i>
+                                </a>
+                            </div>
+
+                            <div class="panel__nav-pages">
+                                <a href="#">1</a>
+                                <a href="#" class="active">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+
+            </section>
+        </section>
+
+        <div class="tests__popup hidden">
+            <div class="tests__popup-inner">
+                <button class="tests__popup-close"><i data-svg="images/svg/red-close.svg"></i></button>
+                <div class="tests__popup-top">
+                    <div class="tests__popup-top-title">Тест 1 товар красный бархат</div>
+                    <button class="tests__popup-top-complete" id="complete-test-btn">Завершить тест</button>
+                    <button class="wizy-btn back restore-campaigns">Восстановить кампании</button>
+                </div>
+                <div class="tests__popup-info">
+                    <div class="tests__popup-info-title">Информация о тесте</div>
+                    <div class="tests__popup-info-content">
+                        <div class="tests__popup-info-content-item">
+                            <span>Показов на фото ----- </span><span class="value">10,000</span>
+                        </div>
+                        <div class="tests__popup-info-content-item">
+                            <span>Показов за круг ----- </span><span class="value">500</span>
+                        </div>
+                        <div class="tests__popup-info-content-item">
+                            <span>Время на круг (минут) ----- </span><span class="value">30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tests__popup-accordion">
+                    <div class="tests__popup-accordion-item active">
+                        <div class="tests__popup-accordion-item-title">
+                            <span>Тестирование</span>
+                            <button class="chevron active"><i data-svg="images/svg/chevron-down.svg"></i></button>
+                        </div>
+                        <div class="tests__popup-accordion-item-content active">
+                            <div class="tests__popup-accordion-item-content__table">
+                                <div class="tleft">
+                                    <div class="tleft-cell empty"></div>
+                                    <div class="tleft-cell">Результат</div>
+                                    <div class="tleft-cell">Показов</div>
+                                    <div class="tleft-cell">Кликов</div>
+                                    <div class="tleft-cell">CTR</div>
+                                    <div class="tleft-cell">Отклонение CTR от лучшего</div>
+                                    <div class="tleft-cell">Кругов</div>
+                                    <div class="tleft-cell cancel">Отменить кампании:&nbsp;<span>3</span></div>
+                                </div>
+                                <div class="tbody">
+                                    <div class="product-column">
+                                        <div class="crown">
+                                            <img src="images/crown.png" alt="">
+                                        </div>
+                                        <div class="image">
+                                            <img src="images/product-thumb-lg.jpg">
+                                        </div>
+                                        <div class="cell status">
+                                            <span class="green">Завершено</span>
+                                        </div>
+                                        <div class="cell">1000</div>
+                                        <div class="cell">50</div>
+                                        <div class="cell">5%</div>
+                                        <div class="cell ctr">
+                                            <span class="green">12.4%</span>
+                                        </div>
+                                        <div class="cell">3</div>
+                                        <div class="cell">
+                                            <div class="checkbox-wrap">
+                                                <div class="checkbox">
+                                                    <label class="table-constructor__field-tigger">
+                                                        <input type="checkbox" value=""
+                                                            class="table-constructor__field-input">
+                                                        <span><i><i data-svg="images/svg/check.svg"></i></i></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-column">
+                                        <div class="image">
+                                            <img src="images/product-thumb-lg.jpg">
+                                        </div>
+                                        <div class="cell status">
+                                            <span class="red">Ошибка</span>
+                                        </div>
+                                        <div class="cell">1000</div>
+                                        <div class="cell">50</div>
+                                        <div class="cell">5%</div>
+                                        <div class="cell ctr">
+                                            <span class="red">12.4%</span>
+                                        </div>
+                                        <div class="cell">3</div>
+                                        <div class="cell">
+                                            <div class="checkbox-wrap">
+                                                <div class="checkbox">
+                                                    <label class="table-constructor__field-tigger">
+                                                        <input type="checkbox" value=""
+                                                            class="table-constructor__field-input">
+                                                        <span><i><i data-svg="images/svg/check.svg"></i></i></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-column">
+                                        <div class="image">
+                                            <img src="images/product-thumb-lg.jpg">
+                                        </div>
+                                        <div class="cell status">
+                                            <span class="yellow">В процессе</span>
+                                        </div>
+                                        <div class="cell">1000</div>
+                                        <div class="cell">50</div>
+                                        <div class="cell">5%</div>
+                                        <div class="cell ctr">
+                                            <span class="green">12.4%</span>
+                                        </div>
+                                        <div class="cell">3</div>
+                                        <div class="cell">
+                                            <div class="checkbox-wrap">
+                                                <div class="checkbox">
+                                                    <label class="table-constructor__field-tigger">
+                                                        <input type="checkbox" value=""
+                                                            class="table-constructor__field-input">
+                                                        <span><i><i data-svg="images/svg/check.svg"></i></i></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-column">
+                                        <div class="image">
+                                            <img src="images/product-thumb-lg.jpg">
+                                        </div>
+                                        <div class="cell status">
+                                            <span class="yellow">В процессе</span>
+                                        </div>
+                                        <div class="cell">1000</div>
+                                        <div class="cell">50</div>
+                                        <div class="cell">5%</div>
+                                        <div class="cell ctr">
+                                            <span class="green">12.4%</span>
+                                        </div>
+                                        <div class="cell">3</div>
+                                        <div class="cell">
+                                            <div class="checkbox-wrap">
+                                                <div class="checkbox">
+                                                    <label class="table-constructor__field-tigger">
+                                                        <input type="checkbox" value=""
+                                                            class="table-constructor__field-input">
+                                                        <span><i><i data-svg="images/svg/check.svg"></i></i></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-column">
+                                        <div class="image">
+                                            <img src="images/product-thumb-lg.jpg">
+                                        </div>
+                                        <div class="cell status">
+                                            <span class="yellow">В процессе</span>
+                                        </div>
+                                        <div class="cell">1000</div>
+                                        <div class="cell">50</div>
+                                        <div class="cell">5%</div>
+                                        <div class="cell ctr">
+                                            <span class="green">12.4%</span>
+                                        </div>
+                                        <div class="cell">3</div>
+                                        <div class="cell">
+                                            <div class="checkbox-wrap">
+                                                <div class="checkbox">
+                                                    <label class="table-constructor__field-tigger">
+                                                        <input type="checkbox" value=""
+                                                            class="table-constructor__field-input">
+                                                        <span><i><i data-svg="images/svg/check.svg"></i></i></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-column">
+                                        <div class="image">
+                                            <img src="images/product-thumb-lg.jpg">
+                                        </div>
+                                        <div class="cell status">
+                                            <span class="yellow">В процессе</span>
+                                        </div>
+                                        <div class="cell">1000</div>
+                                        <div class="cell">50</div>
+                                        <div class="cell">5%</div>
+                                        <div class="cell ctr">
+                                            <span class="green">12.4%</span>
+                                        </div>
+                                        <div class="cell">3</div>
+                                        <div class="cell">
+                                            <div class="checkbox-wrap">
+                                                <div class="checkbox">
+                                                    <label class="table-constructor__field-tigger">
+                                                        <input type="checkbox" value=""
+                                                            class="table-constructor__field-input">
+                                                        <span><i><i data-svg="images/svg/check.svg"></i></i></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tests__popup-accordion-item">
+                        <div class="tests__popup-accordion-item-title">
+                            <span>История действий</span>
+                            <button class="chevron"><i data-svg="images/svg/chevron-down.svg"></i></button>
+                        </div>
+                        <div class="tests__popup-accordion-item-content">
+                            <div class="tests__popup-accordion-item-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 60px;">Фото</th>
+                                            <th style="width: 204px;" class="text-right">Время Установки</th>
+                                            <th style="width: 86px;">CTR</th>
+                                            <th style="width: 100px;" class="text-right">Показы</th>
+                                            <th style="width: 68px;" class="text-right">Клики</th>
+                                            <th style="width: 57px;" class="text-right">Круг</th>
+                                            <th style="width: 122px;" class="text-right">Время круга</th>
+                                            <th style="width: 440px;"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 60px;">
+                                                <div class="image">
+                                                    <img src="images/product-thumb.png">
+                                                </div>
+                                            </td>
+                                            <td style="width: 204px;" class="text-right">12.02.2025 12:00</td>
+                                            <td style="width: 86px;" class="ctr">
+                                                <span class="green">12.4%</span>
+                                            </td>
+                                            <td style="width: 100px;" class="text-right black">1000</td>
+                                            <td style="width: 68px;" class="text-right black">50</td>
+                                            <td style="width: 57px;" class="text-right black">1</td>
+                                            <td style="width: 122px;" class="text-right black">15</td>
+                                            <td style="width: 440px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 60px;">
+                                                <div class="image">
+                                                    <img src="images/product-thumb.png">
+                                                </div>
+                                            </td>
+                                            <td style="width: 204px;" class="text-right">12.02.2025 12:00</td>
+                                            <td style="width: 86px;" class="ctr">
+                                                <span class="red">12.4%</span>
+                                            </td>
+                                            <td style="width: 100px;" class="text-right black">589</td>
+                                            <td style="width: 68px;" class="text-right black">120</td>
+                                            <td style="width: 57px;" class="text-right black">1</td>
+                                            <td style="width: 122px;" class="text-right black">20</td>
+                                            <td style="width: 440px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 60px;">
+                                                <div class="image">
+                                                    <img src="images/product-thumb.png">
+                                                </div>
+                                            </td>
+                                            <td style="width: 204px;" class="text-right">12.02.2025 12:00</td>
+                                            <td style="width: 86px;" class="ctr">
+                                                <span class="red">12.4%</span>
+                                            </td>
+                                            <td style="width: 100px;" class="text-right black">1000</td>
+                                            <td style="width: 68px;" class="text-right black">50</td>
+                                            <td style="width: 57px;" class="text-right black">1</td>
+                                            <td style="width: 122px;" class="text-right black">10</td>
+                                            <td style="width: 440px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 60px;">
+                                                <div class="image">
+                                                    <img src="images/product-thumb.png">
+                                                </div>
+                                            </td>
+                                            <td style="width: 204px;" class="text-right">12.02.2025 12:00</td>
+                                            <td style="width: 86px;" class="ctr">
+                                                <span class="green">12.4%</span>
+                                            </td>
+                                            <td style="width: 100px;" class="text-right black">589</td>
+                                            <td style="width: 68px;" class="text-right black">60</td>
+                                            <td style="width: 57px;" class="text-right black">1</td>
+                                            <td style="width: 122px;" class="text-right black">6</td>
+                                            <td style="width: 440px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 60px;">
+                                                <div class="image">
+                                                    <img src="images/product-thumb.png">
+                                                </div>
+                                            </td>
+                                            <td style="width: 204px;" class="text-right">12.02.2025 12:00</td>
+                                            <td style="width: 86px;" class="ctr">
+                                                <span class="red">12.4%</span>
+                                            </td>
+                                            <td style="width: 100px;" class="text-right black">589</td>
+                                            <td style="width: 68px;" class="text-right black">84</td>
+                                            <td style="width: 57px;" class="text-right black">1</td>
+                                            <td style="width: 122px;" class="text-right black">5</td>
+                                            <td style="width: 440px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 60px;">
+                                                <div class="image">
+                                                    <img src="images/product-thumb.png">
+                                                </div>
+                                            </td>
+                                            <td style="width: 204px;" class="text-right">12.02.2025 12:00</td>
+                                            <td style="width: 86px;" class="ctr">
+                                                <span class="green">12.4%</span>
+                                            </td>
+                                            <td style="width: 100px;" class="text-right black">1000</td>
+                                            <td style="width: 68px;" class="text-right black">65</td>
+                                            <td style="width: 57px;" class="text-right black">1</td>
+                                            <td style="width: 122px;" class="text-right black">6</td>
+                                            <td style="width: 440px;"></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="complete-test__popup hidden" id="complete-test-popup">
+            <div class="complete-test__popup-inner">
+                <div class="complete-test__popup-body">
+                    <div class="attention"><i data-svg="images/svg/attention.svg"></i></div>
+                    <div class="complete-test__popup-body-title">Завершить тест</div>
+                    <div class="complete-test__popup-body-text">Вы уверены, что хотите завершить тест? Это действие невозможно отменить.</div>
+                    <div class="complete-test__popup-body-btns">
+                        <button class="complete-test__popup-body-btns-item cancel" id="cancel-complete-popup">Отмена</button>
+                        <button class="complete-test__popup-body-btns-item delete" id="delete-complete-test">Удалить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="modal-cabinet-delete" class="modal modal-cabinet-delete">
+        <div class="modal__content">
+            <div class="cabinet-delete">
+                <div class="cabinet-delete__icon"><img src="images/svg/alert-circle.svg" alt=""></div>
+                <div class="cabinet-delete__title">Удалить кабинет</div>
+                <div class="cabinet-delete__text">Вы уверены, что хотите удалить кабинет <strong>“Одежда и
+                        украшения”</strong>? Это действие невозможно отменить.</div>
+
+                <div class="cabinet-delete__btns">
+                    <a href="#" class="btn btn-sm btn-outline cabinet__control-decline">Отмена</a>
+                    <a href="#" class="btn btn-sm btn-red cabinet__control-decline">Удалить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-cabinet-edit" class="modal modal-cabinet-edit">
+        <div class="modal__content">
+            <div class="cabinet__control cabinet__block">
+                <div class="cabinet__block-title">Управление Кабинетами</div>
+
+                <div class="cabinet__control-form">
+                    <form>
+                        <div class="form">
+                            <div class="form__row">
+                                <label>Изменить имя кабинета</label>
+                                <input type="text" class="inputbox" placeholder="Одежда и украшения">
+                            </div>
+
+                            <div class="form__row">
+                                <label>Изменить токен</label>
+                                <input type="text" class="inputbox" placeholder="Введите новый токен ВБ">
+                            </div>
+
+                            <div class="form__row form__submit">
+                                <a href="#" class="btn btn-sm btn-outline cabinet__control-decline">Отмена</a>
+                                <input type="submit" class="btn btn-sm" value="Подтвердить">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="scripts/common.js"></script>
+<script src="scripts/jquery-3.7.1.min.js?ver=6jfg3256"></script>
+<script src="scripts/jquery.maskedinput.js?ver=6jfg3256"></script>
+<script src="scripts/jquery.fancybox.js?ver=6jfg3256"></script>
+<script src="scripts/masonry.pkgd.min.js?ver=6jfg3256"></script>
+<script src="scripts/swiper-bundle.min.js?ver=6jfg3256"></script>
+<script src="scripts/init.js?ver=6jfg3256"></script>
+<script src="scripts/table.js?ver=6jfg3256"></script>
+<script src="scripts/tests.js"></script>
+
+</html>
